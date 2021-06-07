@@ -1,0 +1,324 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "name": "Embroidered Striped Floral Knot Short Sleeve",
+            "price": "34.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "medium",
+            "brand": "VIP Petites",
+            "color": "Beige",
+            "materials": "N/A",
+            "category": "top",
+            "description": ""
+        },
+        {
+            "id": "2",
+            "name": "Embroidered Layered Short Sleeve Cardigan Top",
+            "price": "39.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "medium",
+            "brand": "Francisca by Koret",
+            "color": " Lime",
+            "materials": "Polyester/Cotton",
+            "category": "top",
+            "description": ""
+        },
+        {
+            "id": "3",
+            "name": "Sequin Detail Embroidered Knit Short Sleeve",
+            "price": "28.80",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "medium",
+            "brand": "N/A",
+            "color": "Black",
+            "materials": "N/A",
+            "category": "top",
+            "description": ""
+        },
+        {
+            "id": "4",
+            "name": "Floral Band Embroidery Knit Short Sleeve Top",
+            "price": " 38.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "large",
+            "brand": " Functionals",
+            "color": "White/Blue",
+            "materials": "Acrylic",
+            "category": "top",
+            "description": ""
+        },
+        {
+            "id": "5",
+            "name": "Floral Band Eyelet Knit Short Sleeve",
+            "price": " 34.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "medium",
+            "brand": " N/A",
+            "color": "White",
+            "materials": "N/A",
+            "category": "top",
+            "description": ""
+        },
+        {
+            "id": "6",
+            "name": "Pinstripe Clasp Front Mini Skirt",
+            "price": " 24.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "medium",
+            "brand": "N/A",
+            "color": "Black",
+            "materials": "N/A",
+            "category": "bottom",
+            "description": ""
+        },
+        {
+            "id": "7",
+            "name": "Tortoise Shell Multi-Button Denim Skirt",
+            "price": " 24.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "medium",
+            "brand": "N/A",
+            "color": "Dark Denim",
+            "materials": "Cotton",
+            "category": "bottom",
+            "description": ""
+        },
+        {
+            "id": "8",
+            "name": "Flower Duo Graphic Tee",
+            "price": "24.30",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "medium",
+            "brand": "Northern Spirit",
+            "color": "White",
+            "materials": "Cotton/Polyester",
+            "category": "top",
+            "description": ""
+        },
+        {
+            "id": "9",
+            "name": "Ditsy Floral Button Detail Maxi Skirt",
+            "price": "29.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "large",
+            "brand": "N/A",
+            "color": "Multi",
+            "materials": "N/A",
+            "category": "bottom",
+            "description": ""
+        },
+        {
+            "id": "10",
+            "name": "Ruffle Detail Cross PatternMidi Skirt",
+            "price": " 29.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "large",
+            "brand": " Precis",
+            "color": "Pink",
+            "materials": "Polyester",
+            "category": "bottom",
+            "description": ""
+        },
+        {
+            "id": "11",
+            "name": "Baroque Pleated Midi Skirt",
+            "price": " 29.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "medium",
+            "brand": "N/A",
+            "color": "Black/Red",
+            "materials": "N/A",
+            "category": "bottom",
+            "description": ""
+        },
+        {
+            "id": "12",
+            "name": "Staple Shoulder Bag",
+            "price": " 32.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "9x6”",
+            "brand": "PU Leather",
+            "color": "pink",
+            "materials": "leather",
+            "category": "accessories",
+            "description": ""
+        },
+        {
+            "id": "13",
+            "name": "Pastel Headband Set",
+            "price": " 16.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "4x5”",
+            "brand": "",
+            "color": "blue",
+            "materials": "Polyester",
+            "category": "accesorries",
+            "description": ""
+        },
+        {
+            "id": "14",
+            "name": "Layered Cherub Pendant Necklace",
+            "price": " 14.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "13.8+2”",
+            "brand": "Zinc Alloy",
+            "color": "gold",
+            "materials": "silver",
+            "category": "accessories",
+            "description": ""
+        },
+        {
+            "id": "15",
+            "name": "Curved Hoop Earrings",
+            "price": " 12.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "1x1”",
+            "brand": "Post back closure.",
+            "color": "gold",
+            "materials": "gold",
+            "category": "acccessories",
+            "description": ""
+        },
+        {
+            "id": "16",
+            "name": "sneaker",
+            "price": "32.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "7",
+            "brand": "Adidas",
+            "color": "blue/white",
+            "materials": "polyester",
+            "category": "shoes",
+            "description": ""
+        },
+        {
+            "id": "17",
+            "name": "Dr.Martens",
+            "price": "60.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "7",
+            "brand": "Dr.Martens",
+            "color": "black",
+            "materials": "leather",
+            "category": "shoes",
+            "description": ""
+        },
+        {
+            "id": "18",
+            "name": "Velvet Floral WrapDress",
+            "price": " 36.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "large",
+            "brand": "N/A",
+            "color": "Black",
+            "materials": "N/A",
+            "category": "intimates",
+            "description": ""
+        },
+        {
+            "id": "19",
+            "name": "Vintage Button Detail Skater Dress",
+            "price": "36.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "medium",
+            "brand": "Symbol 2000",
+            "color": "Beige",
+            "materials": "Cotton",
+            "category": "intimates",
+            "description": ""
+        },
+        {
+            "id": "20",
+            "name": "Ditsy Floral Swing Dress",
+            "price": "34.00",
+            "img": [
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5838copy_720x.jpg?v=1604957054",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/1604953300344_filtered_540x.jpg?v=1604953398",
+                "https://cdn.shopify.com/s/files/1/0091/1903/9603/products/IMG_5825copy_540x.jpg?v=1604957054"
+            ],
+            "size": "XL",
+            "brand": "Candy Couture",
+            "color": "black",
+            "materials": "Cotton/Spandex",
+            "category": "intimates",
+            "description": ""
+        }
+    ]
+}
