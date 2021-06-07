@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "../PageLayouts/Link";
-import JournalContent from "./journalContent"
+import JournalContent from "./JournalContent"
 
 import journal from "../../assets/journal.jpg";
 import arrow from "../../assets/arrow.png";
