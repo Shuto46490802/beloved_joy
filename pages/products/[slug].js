@@ -18,12 +18,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { ScrollbarPlugin } from 'smooth-scrollbar';
 
-//contentful
-import { createClient } from "contentful";
-import { gql } from '@apollo/client';
-
 import { useRouter } from "next/router";
-import apolloClient from "../../lib/apolloClient";
 
 class EdgeEasingPlugin extends ScrollbarPlugin {
   constructor() {
@@ -56,91 +51,118 @@ const handleDicimal = (_price) => {
 
 export const getStaticProps = async ({ params }) => {
 
-  const { data } = await apolloClient.query({
-    query: gql`
-      query  {
-        products(first: 250) {
-          edges {
-            node {
-              title
-              description
-              handle
-              id
-              tags
-              images(first: 250) {
-                edges {
-                  node {
-                    transformedSrc
-                  }
+  const productsBody = {
+    query: `
+    query  {
+      products(first: 250) {
+        edges {
+          node {
+            title
+            description
+            handle
+            id
+            tags
+            images(first: 250) {
+              edges {
+                node {
+                  transformedSrc
                 }
               }
-              totalInventory
-              variants(first: 250) {
-                edges {
-                  node {
-                    id
-                    sku
-                    priceV2{
-                      amount
-                      currencyCode
-                    }
-                  }
-                }
-              }
-              productType
-              options(first: 250) {
-                values
-                name
-              }
-              vendor
-              availableForSale
             }
+            totalInventory
+            variants(first: 250) {
+              edges {
+                node {
+                  id
+                  sku
+                  priceV2{
+                    amount
+                    currencyCode
+                  }
+                }
+              }
+            }
+            productType
+            options(first: 250) {
+              values
+              name
+            }
+            vendor
+            availableForSale
           }
         }
       }
-    `
-  });
+    }
+      `
+  };
+
+  const { data } = await fetch("https://beloved-development-test.myshopify.com/api/2021-04/graphql.json",
+    {
+      method: "POST",
+      headers: {
+        'X-Shopify-Storefront-Access-Token': process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(productsBody)
+    })
+    .then(async (res) => {
+      return await res.json()
+    })
+
 
   const availabelProducts = data.products.edges.filter((product) => product.node.availableForSale);
 
-  const product = await apolloClient.query({
-    query: gql`
-      query{
-        productByHandle(handle: "${params.slug}") {
-          description
-          handle
-          id
-          tags
-          images(first: 10) {
-            edges {
-              node {
-                transformedSrc
-              }
+  const productBody = {
+    query: `
+    query{
+      productByHandle(handle: "${params.slug}") {
+        description
+        handle
+        id
+        tags
+        images(first: 10) {
+          edges {
+            node {
+              transformedSrc
             }
-          }
-          productType
-          title
-          totalInventory
-          variants(first: 10) {
-            edges {
-              node {
-                id
-                priceV2 {
-                  amount
-                  currencyCode
-                }
-              }
-            }
-          }
-          vendor
-          options(first: 10) {
-            name
-            values
           }
         }
+        productType
+        title
+        totalInventory
+        variants(first: 10) {
+          edges {
+            node {
+              id
+              priceV2 {
+                amount
+                currencyCode
+              }
+            }
+          }
+        }
+        vendor
+        options(first: 10) {
+          name
+          values
+        }
       }
-    `
-  })
+    }
+      `
+  };
+
+  const product = await fetch("https://beloved-development-test.myshopify.com/api/2021-04/graphql.json",
+    {
+      method: "POST",
+      headers: {
+        'X-Shopify-Storefront-Access-Token': process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(productBody)
+    })
+    .then(async (res) => {
+      return await res.json()
+    })
 
   return {
     props: {
@@ -190,50 +212,63 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = async () => {
 
-  const { data } = await apolloClient.query({
-    query: gql`
-      query  {
-        products(first: 250) {
-          edges {
-            node {
-              title
-              description
-              handle
-              id
-              tags
-              images(first: 250) {
-                edges {
-                  node {
-                    transformedSrc
-                  }
+  const body = {
+    query: `
+    query  {
+      products(first: 250) {
+        edges {
+          node {
+            title
+            description
+            handle
+            id
+            tags
+            images(first: 250) {
+              edges {
+                node {
+                  transformedSrc
                 }
               }
-              totalInventory
-              variants(first: 250) {
-                edges {
-                  node {
-                    id
-                    sku
-                    priceV2{
-                      amount
-                      currencyCode
-                    }
-                  }
-                }
-              }
-              productType
-              options(first: 250) {
-                values
-                name
-              }
-              vendor
-              availableForSale
             }
+            totalInventory
+            variants(first: 250) {
+              edges {
+                node {
+                  id
+                  sku
+                  priceV2{
+                    amount
+                    currencyCode
+                  }
+                }
+              }
+            }
+            productType
+            options(first: 250) {
+              values
+              name
+            }
+            vendor
+            availableForSale
           }
         }
       }
-    `
-  });
+    }
+      `
+  };
+
+  const { data } = await fetch("https://beloved-development-test.myshopify.com/api/2021-04/graphql.json",
+    {
+      method: "POST",
+      headers: {
+        'X-Shopify-Storefront-Access-Token': process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body)
+    })
+    .then(async (res) => {
+      return await res.json()
+    })
 
   const paths = data.products.edges.map((product) => {
     return {
@@ -259,7 +294,7 @@ const ProductDetail = ({ product, products, headerRef, humburgerRef, toggleNewsl
   }, [])
 
   const getScrollProxy = () => {
-    
+
     const scroller = scrollerRef.current;
     const bodyScrollBar = Scrollbar.init(scroller, { damping: 0.1, delegateTo: null });
 

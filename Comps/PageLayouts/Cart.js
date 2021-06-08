@@ -7,7 +7,6 @@ import img2 from "../../assets/img2.jpg";
 import { gsap } from "gsap";
 import { useCheckout } from "../../lib/shopifyCheckout";
 import { useRouter } from "next/router";
-import apolloClient from "../../lib/apolloClient";
 
 const Cart = ({ toggleCart, cartOpen }) => {
 

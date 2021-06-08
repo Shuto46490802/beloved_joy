@@ -13,9 +13,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import { ScrollbarPlugin } from 'smooth-scrollbar';
 import { Transition, TransitionGroup } from "react-transition-group";
 
-import { gql } from '@apollo/client';
-import apolloClient from "../lib/apolloClient";
-
 class EdgeEasingPlugin extends ScrollbarPlugin {
     constructor() {
         super(...arguments);
@@ -47,9 +44,9 @@ const handleDicimal = (_price) => {
 
 export const getServerSideProps = async (context) => {
 
-    const { data } = await apolloClient.query({
-        query: gql`
-          query  {
+    const productsBody = {
+        query: `
+        query  {
             products(first: 6, query: "${context.query.keyword}" ) {
               edges {
                 cursor
@@ -90,22 +87,49 @@ export const getServerSideProps = async (context) => {
               }
             }
           }
-        `
-    });
+          `
+    };
+
+    const { data } = await fetch("https://beloved-development-test.myshopify.com/api/2021-04/graphql.json",
+        {
+            method: "POST",
+            headers: {
+                'X-Shopify-Storefront-Access-Token': process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(productsBody)
+        })
+        .then(async (res) => {
+            return await res.json()
+        })
+
 
     const availabelProducts = data.products.edges.filter((product) => product.node.availableForSale);
 
-    const totalResults = await apolloClient.query({
-        query: gql`
-            query {
-                products(first: 250, query: "${context.query.keyword}") {
-                edges {
-                    cursor
-                }
-                }
+    const totalBody = {
+        query: `
+        query {
+            products(first: 250, query: "${context.query.keyword}") {
+            edges {
+                cursor
             }
-        `
-    });
+            }
+        }
+          `
+    };
+
+    const totalResults = await fetch("https://beloved-development-test.myshopify.com/api/2021-04/graphql.json",
+        {
+            method: "POST",
+            headers: {
+                'X-Shopify-Storefront-Access-Token': process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(totalBody)
+        })
+        .then(async (res) => {
+            return await res.json()
+        })
 
     return {
         props: {
@@ -414,10 +438,10 @@ const SearchResults = ({ products, headerRef, totalResults, humburgerRef, toggle
 
     const getProducts = async (_page) => {
 
-        const { data } = await apolloClient.query({
-            query: gql`
-              query  {
-                products(first: 6, query: "${router.query.keyword}", after: "${_page > 1 ? totalResults[(_page - 1) * 6 - 1].cursor : totalResults[0].cursor }" ) {
+        const body = {
+            query: `
+            query  {
+                products(first: 6, query: "${router.query.keyword}", after: "${_page > 1 ? totalResults[(_page - 1) * 6 - 1].cursor : totalResults[0].cursor}" ) {
                   edges {
                     cursor
                     node {
@@ -457,8 +481,21 @@ const SearchResults = ({ products, headerRef, totalResults, humburgerRef, toggle
                   }
                 }
               }
-            `
-        });
+              `
+        };
+
+        const { data } = await fetch("https://beloved-development-test.myshopify.com/api/2021-04/graphql.json",
+            {
+                method: "POST",
+                headers: {
+                    'X-Shopify-Storefront-Access-Token': process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(body)
+            })
+            .then(async (res) => {
+                return await res.json()
+            })
 
         const availabelProducts = data.products.edges.filter((product) => product.node.availableForSale);
 

@@ -3,27 +3,36 @@ import Link from "next/link";
 
 import error from "../assets/error.jpg";
 
-import apolloClient from "../lib/apolloClient";
-import { gql } from '@apollo/client';
-
-
 export const getStaticProps = async () => {
 
-    const { data } = await apolloClient.query({
-        query: gql`
-        query  {
-          products(first: 250) {
-            edges {
-              node {
-                tags
-                productType
-                availableForSale
+    const body = {
+        query: `
+            query  {
+              products(first: 250) {
+                edges {
+                  node {
+                    tags
+                    productType
+                    availableForSale
+                  }
+                }
               }
             }
-          }
-        }
-      `
-    });
+          `
+      };
+    
+      const { data } = await fetch("https://beloved-development-test.myshopify.com/api/2021-04/graphql.json",
+        {
+          method: "POST",
+          headers: {
+            'X-Shopify-Storefront-Access-Token': process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(body)
+        })
+        .then(async (res) => {
+          return await res.json()
+        })
 
     const availabelProducts = data.products.edges.filter((product) => product.node.availableForSale);
 

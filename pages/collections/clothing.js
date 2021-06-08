@@ -9,10 +9,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import { ScrollbarPlugin } from 'smooth-scrollbar';
 import { Transition, TransitionGroup } from "react-transition-group";
 
-import { createClient } from "contentful";
-import { gql, HttpLink, InMemoryCache, ApolloClient } from '@apollo/client'
-import apolloClient from "../../lib/apolloClient";
-
 class EdgeEasingPlugin extends ScrollbarPlugin {
     constructor() {
         super(...arguments);
@@ -40,13 +36,13 @@ Scrollbar.use(EdgeEasingPlugin);
 
 const handleDicimal = (_price) => {
     return _price + "0";
-  }
+}
 
 export const getStaticProps = async () => {
 
-    const { data } = await apolloClient.query({
-        query: gql`
-          query  {
+    const body = {
+        query: `
+        query  {
             products(first: 250) {
               edges {
                 node {
@@ -86,10 +82,24 @@ export const getStaticProps = async () => {
               }
             }
           }
-        `
-      });
-    
-      const availabelProducts = data.products.edges.filter((product) => product.node.availableForSale);
+          `
+    };
+
+    const { data } = await fetch("https://beloved-development-test.myshopify.com/api/2021-04/graphql.json",
+        {
+            method: "POST",
+            headers: {
+                'X-Shopify-Storefront-Access-Token': process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(body)
+        })
+        .then(async (res) => {
+            return await res.json()
+        })
+
+
+    const availabelProducts = data.products.edges.filter((product) => product.node.availableForSale);
 
     return {
         props: {
@@ -99,7 +109,7 @@ export const getStaticProps = async () => {
                 slug: product.node.handle,
                 id: product.node.id,
                 images: product.node.images.edges.map((image) => ({
-                  src: image.node.transformedSrc
+                    src: image.node.transformedSrc
                 })),
                 size: product.node.options[0].values,
                 color: product.node.options[1].values,
@@ -113,7 +123,7 @@ export const getStaticProps = async () => {
                 currencyCode: product.node.variants.edges[0].node.priceV2.currencyCode,
                 brand: product.node.vendor,
                 tags: product.node.tags
-              }))
+            }))
         }
     }
 }

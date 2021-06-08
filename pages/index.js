@@ -16,9 +16,6 @@ import { gsap } from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { ScrollbarPlugin } from 'smooth-scrollbar';
 
-import { gql } from '@apollo/client';
-import apolloClient from "../lib/apolloClient";
-
 const handleDate = (_date) => {
 
   let _year = _date.slice(0, 4);
@@ -79,8 +76,8 @@ export const getStaticProps = async () => {
   const instagramRes = await fetch(url);
   const instaData = await instagramRes.json();
 
-  const { data } = await apolloClient.query({
-    query: gql`
+  const body = {
+    query: `
       query  {
         products(first: 250) {
           edges {
@@ -121,23 +118,24 @@ export const getStaticProps = async () => {
           }
         }
       }
+
     `
-  });
+  }
+
+  const { data } = await fetch("https://beloved-development-test.myshopify.com/api/2021-04/graphql.json",
+    {
+      method: "POST",
+      headers: {
+        'X-Shopify-Storefront-Access-Token': process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body)
+    })
+    .then(async (res) => {
+      return await res.json()
+    })
 
   const availabelProducts = data.products.edges.filter((product) => product.node.availableForSale);
-
-  // const products = await fetch(`https://beloved-development-test.myshopify.com/admin/api/2021-04/graphql.json`,
-  //   {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       "X-Shopify-Access-Token": process.env.SHOPIFY_PASSWORD,
-  //     },
-  //     body: JSON.stringify(body)
-  //   })
-  //   .then(async (res) => {
-  //     return await res.json();
-  //   })
 
   return {
     props: {
@@ -166,7 +164,7 @@ export const getStaticProps = async () => {
         price: handleDicimal(product.node.variants.edges[0].node.priceV2.amount),
         currencyCode: product.node.variants.edges[0].node.priceV2.currencyCode,
         brand: product.node.vendor,
-        tags: product.node.tags
+        tags: product.node.tags,
       }))
     }
   }
@@ -200,7 +198,7 @@ Scrollbar.use(EdgeEasingPlugin);
 const HomePage = ({ headerRef, humburgerRef, products, instagramData, addToHeadingRefs, addToCaptionLeftRefs, addToCaptionRightRefs, headingRefs, introImageWrapperRef, captionLeftRefs, captionRightRefs, introHeadingWrapperRef, toggleNewsletterPopup }) => {
 
   const scrollerRef = useRef();
-  
+
   useEffect(() => {
     getScrollProxy();
   }, [])

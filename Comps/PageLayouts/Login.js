@@ -5,8 +5,6 @@ import { useRouter } from "next/router";
 import { useAuth } from "../../lib/auth";
 
 import { gsap } from "gsap";
-import { gql } from '@apollo/client';
-import apolloClient from "../../lib/apolloClient";
 import { useCheckout } from "../../lib/shopifyCheckout";
 
 const Login = ({ toggleLogin, loginOpen }) => {
