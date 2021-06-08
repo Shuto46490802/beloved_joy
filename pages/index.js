@@ -72,7 +72,7 @@ const handleDicimal = (_price) => {
 export const getStaticProps = async () => {
 
   //instagram
-  const url = `https://graph.facebook.com/v8.0/${process.env.NEXT_PUBLIC_INSTAGRAM_ACCOUNT_ID}?fields=name%2Cmedia.limit(12)%7Bcaption%2Clike_count%2Cmedia_url%2Cpermalink%2Ctimestamp%2Cusername%7D&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_KEY}`
+  const url = `https://graph.facebook.com/v8.0/${process.env.INSTAGRAM_ACCOUNT_ID}?fields=name%2Cmedia.limit(12)%7Bcaption%2Clike_count%2Cmedia_url%2Cpermalink%2Ctimestamp%2Cusername%7D&access_token=${process.env.INSTAGRAM_ACCESS_KEY}`
   const instagramRes = await fetch(url);
   const instaData = await instagramRes.json();
   console.log(instaData)
