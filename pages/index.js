@@ -70,7 +70,7 @@ const handleDicimal = (_price) => {
 }
 
 export const getStaticProps = async () => {
-  
+
   const body = {
     query: `
       query  {
@@ -134,7 +134,10 @@ export const getStaticProps = async () => {
 
   const instaData = await fetch(`https://graph.facebook.com/v11.0/${process.env.INSTAGRAM_ACCOUNT_ID}?fields=name,media.limit(12){caption,media_url,thumbnail_url,permalink,like_count,comments_count,media_type,timestamp}&access_token=${process.env.INSTAGRAM_ACCESS_KEY}`)
     .then(async (res) => {
-      return  res.json();
+      return res.json();
+    })
+    .catch((error) => {
+      console.log(error)
     })
 
   return {

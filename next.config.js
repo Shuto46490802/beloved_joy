@@ -5,7 +5,7 @@ const runtimeCaching = require('next-pwa/cache')
 
 module.exports = withTM(withImages(withPWA({
   images: {
-    domains: ['scontent.cdninstagram.com', 'cdninstagram.com', 'cdn.shopify.com', 'images.ctfassets.net', 'scontent-lga3-2.cdninstagram.com', 'scontent-lga3-1.cdninstagram.com', 'scontent-iad3-2.cdninstagram.com']
+    domains: ['scontent.cdninstagram.com', 'cdn.shopify.com', 'images.ctfassets.net']
   },
   pwa: {
     dest: 'public',
