@@ -70,12 +70,7 @@ const handleDicimal = (_price) => {
 }
 
 export const getStaticProps = async () => {
-
-  //instagram
-  const url = `https://graph.facebook.com/v8.0/${process.env.INSTAGRAM_ACCOUNT_ID}?fields=name%2Cmedia.limit(12)%7Bcaption%2Clike_count%2Cmedia_url%2Cpermalink%2Ctimestamp%2Cusername%7D&access_token=${process.env.INSTAGRAM_ACCESS_KEY}`
-  const instagramRes = await fetch(url);
-  const instaData = await instagramRes.json();
-
+  
   const body = {
     query: `
       query  {
@@ -137,6 +132,11 @@ export const getStaticProps = async () => {
 
   const availabelProducts = data.products.edges.filter((product) => product.node.availableForSale);
 
+  const instaData = await fetch(`https://graph.facebook.com/v11.0/${process.env.INSTAGRAM_ACCOUNT_ID}?fields=name,media.limit(12){caption,media_url,thumbnail_url,permalink,like_count,comments_count,media_type,timestamp}&access_token=${process.env.INSTAGRAM_ACCESS_KEY}`)
+    .then(async (res) => {
+      return  res.json();
+    })
+
   return {
     props: {
       instagramData: instaData.media.data.map((data) => ({
@@ -165,7 +165,7 @@ export const getStaticProps = async () => {
         currencyCode: product.node.variants.edges[0].node.priceV2.currencyCode,
         brand: product.node.vendor,
         tags: product.node.tags,
-      }))
+      })),
     }
   }
 }
@@ -195,12 +195,13 @@ EdgeEasingPlugin.pluginName = 'edgeEasing';
 
 Scrollbar.use(EdgeEasingPlugin);
 
-const HomePage = ({ headerRef, humburgerRef, products, instagramData, addToHeadingRefs, addToCaptionLeftRefs, addToCaptionRightRefs, headingRefs, introImageWrapperRef, captionLeftRefs, captionRightRefs, introHeadingWrapperRef, toggleNewsletterPopup }) => {
+const HomePage = ({ headerRef, humburgerRef, res3, products, instagramData, addToHeadingRefs, addToCaptionLeftRefs, addToCaptionRightRefs, headingRefs, introImageWrapperRef, captionLeftRefs, captionRightRefs, introHeadingWrapperRef, toggleNewsletterPopup }) => {
 
   const scrollerRef = useRef();
 
   useEffect(() => {
     getScrollProxy();
+    console.log(res3)
   }, [])
 
   const getScrollProxy = () => {
