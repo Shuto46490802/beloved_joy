@@ -67,6 +67,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
                                 <div className="nav-link d-flex flex-center ml-1 mr-1 no-wrap">
 
                                     <button
+                                        name="button"
                                         onClick={() => {
                                             toggleShopMenu()
                                         }}
@@ -147,6 +148,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
                         </button>
 
                         <button
+                            name="button"
                             className="nav-icon d-md-block d-none"
                             onClick={() => {
                                 if (!isCartEmpty.state) {
@@ -174,6 +176,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
                         </button>
 
                         <button
+                            name="button"
                             className="nav-icon d-md-none d-block"
                             onClick={() => {
                                 if (!isCartEmpty.state) {
@@ -196,7 +199,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
 
                         {
                             user !== null
-                                ? <button onClick={() => { toggleAccount() }} className="nav-icon ">
+                                ? <button name="button" onClick={() => { toggleAccount() }} className="nav-icon ">
 
                                     <span className="line-link d-md-block d-none">
                                         MyAccount
@@ -214,7 +217,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
                                     </svg>
 
                                 </button>
-                                : <button onClick={() => { toggleLogin() }} className="nav-icon ">
+                                : <button name="button" onClick={() => { toggleLogin() }} className="nav-icon ">
 
                                     <span className="line-link d-md-block d-none">
                                         Login

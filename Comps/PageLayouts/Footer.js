@@ -254,10 +254,11 @@ const Footer = ({ getScrollProxy, footerRef, toggleNewsletterPopup, currentPage 
                                             <div ref={headlineRef} className="">Join Our Journey</div>
                                         </h4>
 
-                                        <button 
-                                        onClick={() => toggleNewsletterPopup()}
-                                        ref={formRef} 
-                                        className="c-footer__newsletter__button  mt-1 mt-md-2 h4 position-relative"
+                                        <button
+                                            name="button"
+                                            onClick={() => toggleNewsletterPopup()}
+                                            ref={formRef}
+                                            className="c-footer__newsletter__button  mt-1 mt-md-2 h4 position-relative"
                                         >
 
                                             <div className="button d-inline-block line-link w-100">

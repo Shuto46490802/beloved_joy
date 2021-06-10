@@ -310,7 +310,7 @@ const JournalContent = ({ img, heading1, heading2, summary, sectionRef, innerRef
 
                 <div ref={addToButtonRefs} className="c-journal__text__button position-relative should-animate">
 
-                    <Link href={`/journal/${heading1}-${heading2}`}>
+                    <Link href={`/`}>
 
                         <a className="c-journal__text__button__link text-white position-relative">
 

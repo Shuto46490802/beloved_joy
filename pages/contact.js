@@ -147,27 +147,34 @@ const Contact = ({ contactIntroImageWrapperRef, contactIntroHeading1WrapperRef, 
   }
 
   return (
-    <div ref={scrollerRef} className="page">
+    <>
+      <Head>
+        <title>Beloved Joy | Contact</title>
+      </Head>
 
-      <div className="components-wrapper">
+      <div ref={scrollerRef} className="page">
 
-        <Intro
-          getScrollProxy={getScrollProxy}
-          contactIntroImageWrapperRef={contactIntroImageWrapperRef}
-          contactIntroHeading1WrapperRef={contactIntroHeading1WrapperRef}
-          contactIntroHeading1Ref={contactIntroHeading1Ref}
-          contactIntroHeading2WrapperRef={contactIntroHeading2WrapperRef}
-          contactIntroHeading2Ref={contactIntroHeading2Ref}
-        />
+        <div className="components-wrapper">
 
-        <Content />
+          <Intro
+            getScrollProxy={getScrollProxy}
+            contactIntroImageWrapperRef={contactIntroImageWrapperRef}
+            contactIntroHeading1WrapperRef={contactIntroHeading1WrapperRef}
+            contactIntroHeading1Ref={contactIntroHeading1Ref}
+            contactIntroHeading2WrapperRef={contactIntroHeading2WrapperRef}
+            contactIntroHeading2Ref={contactIntroHeading2Ref}
+          />
 
+          <Content />
+
+
+        </div>
+
+        <Footer getScrollProxy={getScrollProxy} toggleNewsletterPopup={toggleNewsletterPopup} />
 
       </div>
 
-      <Footer getScrollProxy={getScrollProxy} toggleNewsletterPopup={toggleNewsletterPopup} />
-
-    </div>
+    </>
   );
 }
 

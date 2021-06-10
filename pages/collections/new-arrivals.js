@@ -202,9 +202,14 @@ const NewArrivals = ({ products, headerRef, humburgerRef, }) => {
   }
 
   return (
+    <>
+      <Head>
+        <title>Beloved Joy | New Arrivals</title>
+      </Head>
 
-    <Content products={newArrivals} scrollerRef={scrollerRef} />
+      <Content products={newArrivals} scrollerRef={scrollerRef} />
 
+    </>
   );
 }
 

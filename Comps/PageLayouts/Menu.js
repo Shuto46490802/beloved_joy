@@ -275,7 +275,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
                         <div className={"c-menu__wrapper d-flex flex-wrap w-100"}>
                             <ul className={"c-menu__list w-100"}>
                                 <li className="c-menu__list__item w-100 my-1 ms-1">
-                                    <button onClick={() => setAccordion({ state: !accordion.state, anim: !accordion.state ? "anim-in" : "anim-out" })} className="c-menu__list__link js-accordion__trigger position-relative">
+                                    <button name="button" onClick={() => setAccordion({ state: !accordion.state, anim: !accordion.state ? "anim-in" : "anim-out" })} className="c-menu__list__link js-accordion__trigger position-relative">
                                         <span ref={addToTextRefs} className={"c-menu__list__link__text lh-1"}>
                                             Shop
                                             </span>
@@ -489,7 +489,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
                                 <div style={{ position: "absolute", left: "-5000px" }}>
                                     <input type="text" />
                                 </div>
-                                <button onClick={() => toggleMenu()} className={"c-hoz-arrow c-hoz-arrow--right js-submit"}>
+                                <button name="button" onClick={() => toggleMenu()} className={"c-hoz-arrow c-hoz-arrow--right js-submit"}>
                                     Subscribe
                                          <svg x="0px" y="0px" viewBox="0 0 22 10">
                                         <polygon points="17,0.65 16.29,1.35 19.44,4.5 0.65,4.5 0.65,5.5 19.44,5.5 16.29,8.65 17,9.35 21.35,5 " />

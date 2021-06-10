@@ -161,7 +161,7 @@ const Policy = ({ getScrollProxy }) => {
         }
 
     }
-    
+
     const toggleShipping = () => {
 
         if (!shipping.state) {
@@ -378,6 +378,7 @@ const Policy = ({ getScrollProxy }) => {
                         <div className="product-policy__list__item">
 
                             <button
+                                name="button"
                                 onClick={() => {
                                     toggleShipping()
                                     setKey("shipping-return")
@@ -414,6 +415,7 @@ const Policy = ({ getScrollProxy }) => {
                         <div className="product-policy__list__item mt-2 mt-md-3"> {/* active */}
 
                             <button
+                                name="button"
                                 onClick={() => {
                                     togglePickup()
                                     setKey("pickup")
@@ -451,6 +453,7 @@ const Policy = ({ getScrollProxy }) => {
                         <div className="product-policy__list__item mt-2 mt-md-3"> {/* active */}
 
                             <button
+                                name="button"
                                 onClick={() => {
                                     togglePromise()
                                     setKey("promise")

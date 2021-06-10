@@ -15,6 +15,7 @@ const Logout = ({ toggleAccount, toggleLogout, logoutRef, logoutOverlayRef }) =>
                 <div className="mt-3 w-100 d-flex justify-content-between col-sm-6 col-lg px-4">
 
                     <button
+                        name="button"
                         onClick={async () => {
                             await firebase
                                 .auth()
@@ -27,6 +28,7 @@ const Logout = ({ toggleAccount, toggleLogout, logoutRef, logoutOverlayRef }) =>
                     </button>
 
                     <button
+                        name="button"
                         onClick={() => {
                             toggleLogout()
                         }}

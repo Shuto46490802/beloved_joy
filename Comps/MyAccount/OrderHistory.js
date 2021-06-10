@@ -118,6 +118,7 @@ const OrderHitory = ({ ordersDetail, getOrderDetail }) => {
                             <td className="px-6" />
 
                             <button
+                                name="button"
                                 onClick={() => getOrderDetail(order.node.name)}
                             >
 

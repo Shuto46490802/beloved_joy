@@ -225,7 +225,9 @@ const Login = ({ toggleLogin, loginOpen }) => {
 
             <div className="c-login__inner d-flex justify-content-center w-100 onTop">
 
-                <button onClick={() => { 
+                <button
+                name="button"
+                 onClick={() => { 
                     toggleLogin() 
                     resetInput()
                     }} 
@@ -236,6 +238,7 @@ const Login = ({ toggleLogin, loginOpen }) => {
                     <div className="d-flex justify-content-between align-items-start mb-1">
 
                         <button 
+                        name="button"
                         style={isNew === "" ? {visibility: "hidden"} : {}} 
                         className="c-login-back-button"
                         onClick={() => { 
@@ -251,7 +254,9 @@ const Login = ({ toggleLogin, loginOpen }) => {
 
                         <div className="c-login-close-button d-flex flex-center">
 
-                            <button onClick={() => { 
+                            <button 
+                            name="button"
+                            onClick={() => { 
                                 toggleLogin() 
                                 resetInput()
                             }} 
@@ -392,6 +397,7 @@ const Login = ({ toggleLogin, loginOpen }) => {
                                                 </small>
 
                                                 <button
+                                                name="button"
                                                     className="forgot-link__wrapper d-block"
                                                     type="button"
                                                     onClick={async () => {
@@ -588,6 +594,7 @@ const Login = ({ toggleLogin, loginOpen }) => {
                             </div>
 
                             <button
+                            name="button"
                                 type="button"
                                 className="button onTop w-100"
                                 onClick={async (e) => {

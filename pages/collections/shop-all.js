@@ -196,9 +196,14 @@ const ShopAll = ({ products, headerRef, humburgerRef }) => {
   }
 
   return (
+    <>
+      <Head>
+        <title>Beloved Joy | Home</title>
+      </Head>Shop All
 
-    <Content products={products} scrollerRef={scrollerRef} />
+      <Content products={products} scrollerRef={scrollerRef} />
 
+    </>
   );
 }
 

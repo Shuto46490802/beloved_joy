@@ -94,7 +94,7 @@ const Intro = ({ termsIntroImageWrapperRef, termsIntroHeadingWrapperRef, termsIn
                             <div ref={addToIntroImageRefs} className="parallax">
 
                                 <figure className="fig-wrapper ">
-                                    <Image loading="eager" src={img} layout="fill" />
+                                    <Image alt="" src={img} layout="fill" />
                                 </figure>
 
                             </div>
@@ -108,7 +108,7 @@ const Intro = ({ termsIntroImageWrapperRef, termsIntroHeadingWrapperRef, termsIn
                             <div ref={addToIntroImageRefs} className="parallax">
 
                                 <figure className="fig-wrapper">
-                                    <Image src={img} layout="fill" />
+                                    <Image alt="" src={img} layout="fill" />
                                 </figure>
 
                             </div>

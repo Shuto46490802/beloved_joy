@@ -206,8 +206,14 @@ const HomeWear = ({ products, headerRef, humburgerRef, }) => {
   }
 
   return (
+    <>
+    <Head>
+        <title>Beloved Joy | Homewear</title>
+      </Head>
 
     <Content products={homewear} scrollerRef={scrollerRef} />
+
+    </>
 
   );
 }

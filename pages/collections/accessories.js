@@ -234,33 +234,40 @@ const Accessories = ({ accessoriesData, products, headerRef, humburgerRef, }) =>
     }
 
     return (
-        <TransitionGroup className="position-static">
+        <>
+            <Head>
+                <title>Beloved Joy | Accessories</title>
+            </Head>
 
-            <Transition
-                timeout={750}
-                key={accessoriesData}
-                onEnter={onEnter}
-                onExit={onExit}
-                appear={true}
-            >
+            <TransitionGroup className="position-static">
 
-                <Content
-                    scrollerRef={scrollerRef}
-                    products={
-                        accessoriesData === "viewall"
-                            ? viewAll
-                            : accessoriesData === "earings"
-                                ? earings
-                                : accessoriesData === "rings"
-                                    ? rings
-                                    : accessoriesData === "necklace"
-                                        ? necklace
-                                        : null
-                    } />
+                <Transition
+                    timeout={750}
+                    key={accessoriesData}
+                    onEnter={onEnter}
+                    onExit={onExit}
+                    appear={true}
+                >
 
-            </Transition>
+                    <Content
+                        scrollerRef={scrollerRef}
+                        products={
+                            accessoriesData === "viewall"
+                                ? viewAll
+                                : accessoriesData === "earings"
+                                    ? earings
+                                    : accessoriesData === "rings"
+                                        ? rings
+                                        : accessoriesData === "necklace"
+                                            ? necklace
+                                            : null
+                        } />
 
-        </TransitionGroup>
+                </Transition>
+
+            </TransitionGroup>
+
+        </>
 
     );
 }

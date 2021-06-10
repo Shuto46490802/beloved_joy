@@ -51,19 +51,19 @@ export const getStaticProps = async () => {
               }
             }
           `
-      };
-    
-      const { data } = await fetch("https://beloved-development-test.myshopify.com/api/2021-04/graphql.json",
+    };
+
+    const { data } = await fetch("https://beloved-development-test.myshopify.com/api/2021-04/graphql.json",
         {
-          method: "POST",
-          headers: {
-            'X-Shopify-Storefront-Access-Token': process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(body)
+            method: "POST",
+            headers: {
+                'X-Shopify-Storefront-Access-Token': process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(body)
         })
         .then(async (res) => {
-          return await res.json()
+            return await res.json()
         })
 
     const availabelProducts = data.products.edges.filter((product) => product.node.availableForSale);
@@ -226,43 +226,50 @@ const PrivacyPolicy = ({ privacyIntroImageWrapperRef, privacyIntroHeadingWrapper
     }
 
     return (
-        <div ref={scrollerRef} className="page">
+        <>
+            <Head>
+                <title>Beloved Joy | Privacy Policy</title>
+            </Head>
 
-            <div className="components-wrapper">
+            <div ref={scrollerRef} className="page">
 
-                <div className="c-privacy-policy">
+                <div className="components-wrapper">
 
-                    <Intro
-                        privacyIntroImageWrapperRef={privacyIntroImageWrapperRef}
-                        privacyIntroHeadingWrapperRef={privacyIntroHeadingWrapperRef}
-                        privacyIntroHeadingRef={privacyIntroHeadingRef}
-                        getScrollProxy={getScrollProxy}
-                    />
+                    <div className="c-privacy-policy">
 
-                    <div ref={contentRef} className="c-privacy-policy__content__wrapper position-relative w-100 h-100 py-md-0 px-md-0 py-2 px-1 ">
-
-                        <div className="background pink"></div>
-
-                        <Navigation
-                            scrollTo={scrollTo}
-                            sectionTops={sectionTops}
-                            sectionRefs={sectionRefs}
-                            navigationRef={navigationRef}
-                            scrollTrackRef={scrollTrackRef}
-                            scrollThumbRef={scrollThumbRef}
+                        <Intro
+                            privacyIntroImageWrapperRef={privacyIntroImageWrapperRef}
+                            privacyIntroHeadingWrapperRef={privacyIntroHeadingWrapperRef}
+                            privacyIntroHeadingRef={privacyIntroHeadingRef}
+                            getScrollProxy={getScrollProxy}
                         />
 
-                        <Content addToSectionRefs={addToSectionRefs} />
+                        <div ref={contentRef} className="c-privacy-policy__content__wrapper position-relative w-100 h-100 py-md-0 px-md-0 py-2 px-1 ">
+
+                            <div className="background pink"></div>
+
+                            <Navigation
+                                scrollTo={scrollTo}
+                                sectionTops={sectionTops}
+                                sectionRefs={sectionRefs}
+                                navigationRef={navigationRef}
+                                scrollTrackRef={scrollTrackRef}
+                                scrollThumbRef={scrollThumbRef}
+                            />
+
+                            <Content addToSectionRefs={addToSectionRefs} />
+
+                        </div>
 
                     </div>
 
                 </div>
 
+                <Footer getScrollProxy={getScrollProxy} toggleNewsletterPopup={toggleNewsletterPopup} />
+
             </div>
 
-            <Footer getScrollProxy={getScrollProxy} toggleNewsletterPopup={toggleNewsletterPopup} />
-
-        </div>
+        </>
     );
 }
 

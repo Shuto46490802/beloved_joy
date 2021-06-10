@@ -526,135 +526,143 @@ const SearchResults = ({ products, headerRef, totalResults, humburgerRef, toggle
 
     return (
 
-        <div ref={scrollerRef} className="page">
+        <>
 
-            <div className="components-wrapper">
+            <Head>
+                <title>Beloved Joy | Search Results</title>
+            </Head>
 
-                <div className="c-search-results pt-4">
+            <div ref={scrollerRef} className="page">
 
-                    <div className="background pink" />
+                <div className="components-wrapper">
 
-                    <div className="c-search-results__wrapper px-md-1 px-xl-5 py-3 pb-xl-5 w-100">
+                    <div className="c-search-results pt-4">
 
-                        <div className="c-search-results-text__wrapper d-flex align-items-center justify-content-md-start justify-content-center mb-md-4">
+                        <div className="background pink" />
 
-                            <div>
+                        <div className="c-search-results__wrapper px-md-1 px-xl-5 py-3 pb-xl-5 w-100">
 
-                                <p className="mb-6">
-
-                                    search results for:
-
-                                </p>
-
-                                <h2 className="position-relative">
-
-                                    {router.query.keyword}
-
-                                    <span className="c-search-results-count">{searchResults.length}</span>
-
-                                </h2>
-
-                            </div>
-
-                        </div>
-
-                        <TransitionGroup className="c-search-results-content__wrapper">
-
-                            <Transition>
-
-                                <div className="d-flex flex-wrap">
-
-                                    {
-                                        searchResults.map((data) => {
-                                            return <div className="c-search-results-content col-md-4 col-12">
-
-                                                <Link href={`/products/[slug]`} as={`/products/${data.slug}`}>
-
-                                                    <a className="d-block w-100 h-100">
-
-                                                        <div className="c-search-results-image_wrapper position-relative">
-
-                                                            <figure className="fig-wrapper should-animate">
-
-                                                                <Image alt="" src={data.images[0].src} layout="fill" />
-
-                                                            </figure>
-
-                                                            <figure className="fig-wrapper c-product-thumb__overlay should-animate">
-
-                                                                <Image alt="" src={data.images[1].src} layout="fill" />
-
-                                                            </figure>
-
-                                                        </div>
-
-                                                        <div className="c-product__caption text-white should-animate mt-1">
-                                                            <h4 className="c-product__caption__text">
-                                                                {data.name}
-                                                            </h4>
-                                                            <h4 className="price">
-                                                                ${data.price}
-                                                            </h4>
-                                                        </div>
-
-                                                    </a>
-
-                                                </Link>
-
-                                            </div>
-                                        })
-                                    }
-
-                                </div>
-
-                            </Transition>
-
-                        </TransitionGroup>
-
-                        <div className="d-flex justify-content-center">
-
-                            <div className="c-search-results-pagination d-flex align-items-center justify-content-between no-select col-md-6 col-lg-3 mt-3 mt-xl-5">
-
-                                <button
-                                    className="prev p-1 p-xl-0 mr-md-3"
-                                    onClick={() => {
-                                        if (currentPage > 1) {
-                                            getProducts(currentPage - 1);
-                                            setCurrentPage(currentPage - 1)
-                                        }
-                                    }}
-                                >
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.49 31.49" className="arrow mirror"><path d="M21.205 5.007a1.112 1.112 0 00-1.587 0 1.12 1.12 0 000 1.571l8.047 8.047H1.111A1.106 1.106 0 000 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 001.587 0l9.952-9.952a1.093 1.093 0 000-1.571l-9.952-9.953z"></path></svg>
-
-                                </button>
+                            <div className="c-search-results-text__wrapper d-flex align-items-center justify-content-md-start justify-content-center mb-md-4">
 
                                 <div>
 
-                                    {getPagination()}
+                                    <p className="mb-6">
+
+                                        search results for:
+
+                                </p>
+
+                                    <h2 className="position-relative">
+
+                                        {router.query.keyword}
+
+                                        <span className="c-search-results-count">{searchResults.length}</span>
+
+                                    </h2>
 
                                 </div>
 
-                                <button
-                                    className="next p-1 p-xl-0 ml-md-3"
-                                    onClick={(e) => {
-                                        if (totalResults.length % 6 === 0) {
-                                            if (currentPage < Math.floor(totalSearchResults.length / 6)) {
-                                                getProducts(currentPage + 1);
-                                                setCurrentPage(currentPage + 1)
-                                            }
-                                        } else {
-                                            if (currentPage < Math.floor(totalResults.length / 6 + 1)) {
-                                                getProducts(currentPage + 1);
-                                                setCurrentPage(currentPage + 1)
-                                            }
+                            </div>
+
+                            <TransitionGroup className="c-search-results-content__wrapper">
+
+                                <Transition>
+
+                                    <div className="d-flex flex-wrap">
+
+                                        {
+                                            searchResults.map((data) => {
+                                                return <div className="c-search-results-content col-md-4 col-12">
+
+                                                    <Link href={`/products/[slug]`} as={`/products/${data.slug}`}>
+
+                                                        <a className="d-block w-100 h-100">
+
+                                                            <div className="c-search-results-image_wrapper position-relative">
+
+                                                                <figure className="fig-wrapper should-animate">
+
+                                                                    <Image alt="" src={data.images[0].src} layout="fill" />
+
+                                                                </figure>
+
+                                                                <figure className="fig-wrapper c-product-thumb__overlay should-animate">
+
+                                                                    <Image alt="" src={data.images[1].src} layout="fill" />
+
+                                                                </figure>
+
+                                                            </div>
+
+                                                            <div className="c-product__caption text-white should-animate mt-1">
+                                                                <h4 className="c-product__caption__text">
+                                                                    {data.name}
+                                                                </h4>
+                                                                <h4 className="price">
+                                                                    ${data.price}
+                                                                </h4>
+                                                            </div>
+
+                                                        </a>
+
+                                                    </Link>
+
+                                                </div>
+                                            })
                                         }
-                                    }}
-                                >
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.49 31.49" className="arrow"><path d="M21.205 5.007a1.112 1.112 0 00-1.587 0 1.12 1.12 0 000 1.571l8.047 8.047H1.111A1.106 1.106 0 000 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 001.587 0l9.952-9.952a1.093 1.093 0 000-1.571l-9.952-9.953z"></path></svg>
+                                    </div>
 
-                                </button>
+                                </Transition>
+
+                            </TransitionGroup>
+
+                            <div className="d-flex justify-content-center">
+
+                                <div className="c-search-results-pagination d-flex align-items-center justify-content-between no-select col-md-6 col-lg-3 mt-3 mt-xl-5">
+
+                                    <button
+                                        className="prev p-1 p-xl-0 mr-md-3"
+                                        onClick={() => {
+                                            if (currentPage > 1) {
+                                                getProducts(currentPage - 1);
+                                                setCurrentPage(currentPage - 1)
+                                            }
+                                        }}
+                                    >
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.49 31.49" className="arrow mirror"><path d="M21.205 5.007a1.112 1.112 0 00-1.587 0 1.12 1.12 0 000 1.571l8.047 8.047H1.111A1.106 1.106 0 000 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 001.587 0l9.952-9.952a1.093 1.093 0 000-1.571l-9.952-9.953z"></path></svg>
+
+                                    </button>
+
+                                    <div>
+
+                                        {getPagination()}
+
+                                    </div>
+
+                                    <button
+                                        className="next p-1 p-xl-0 ml-md-3"
+                                        onClick={(e) => {
+                                            if (totalResults.length % 6 === 0) {
+                                                if (currentPage < Math.floor(totalSearchResults.length / 6)) {
+                                                    getProducts(currentPage + 1);
+                                                    setCurrentPage(currentPage + 1)
+                                                }
+                                            } else {
+                                                if (currentPage < Math.floor(totalResults.length / 6 + 1)) {
+                                                    getProducts(currentPage + 1);
+                                                    setCurrentPage(currentPage + 1)
+                                                }
+                                            }
+                                        }}
+                                    >
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.49 31.49" className="arrow"><path d="M21.205 5.007a1.112 1.112 0 00-1.587 0 1.12 1.12 0 000 1.571l8.047 8.047H1.111A1.106 1.106 0 000 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 001.587 0l9.952-9.952a1.093 1.093 0 000-1.571l-9.952-9.953z"></path></svg>
+
+                                    </button>
+
+                                </div>
 
                             </div>
 
@@ -664,11 +672,11 @@ const SearchResults = ({ products, headerRef, totalResults, humburgerRef, toggle
 
                 </div>
 
+                <Footer currentPage={currentPage} getScrollProxy={getScrollProxy} toggleNewsletterPopup={toggleNewsletterPopup} />
+
             </div>
 
-            <Footer currentPage={currentPage} getScrollProxy={getScrollProxy} toggleNewsletterPopup={toggleNewsletterPopup} />
-
-        </div>
+        </>
     );
 }
 

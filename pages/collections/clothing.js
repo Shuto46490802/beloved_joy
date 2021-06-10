@@ -235,32 +235,39 @@ const Clothing = ({ clothingData, products, headerRef, humburgerRef, }) => {
     }
 
     return (
-        <TransitionGroup className="position-static">
+        <>
+        <Head>
+        <title>Beloved Joy | Clothing</title>
+      </Head>
 
-            <Transition
-                timeout={750}
-                key={clothingData}
-                onEnter={onEnter}
-                onExit={onExit}
-            >
+            <TransitionGroup className="position-static">
 
-                <Content
-                    scrollerRef={scrollerRef}
-                    products={
-                        clothingData === "viewall"
-                            ? viewAll
-                            : clothingData === "top"
-                                ? top
-                                : clothingData === "bottom"
-                                    ? bottom
-                                    : clothingData === "intimates"
-                                        ? intimates
-                                        : null
-                    } />
+                <Transition
+                    timeout={750}
+                    key={clothingData}
+                    onEnter={onEnter}
+                    onExit={onExit}
+                >
 
-            </Transition>
+                    <Content
+                        scrollerRef={scrollerRef}
+                        products={
+                            clothingData === "viewall"
+                                ? viewAll
+                                : clothingData === "top"
+                                    ? top
+                                    : clothingData === "bottom"
+                                        ? bottom
+                                        : clothingData === "intimates"
+                                            ? intimates
+                                            : null
+                        } />
 
-        </TransitionGroup >
+                </Transition>
+
+            </TransitionGroup >
+
+        </>
 
     );
 }

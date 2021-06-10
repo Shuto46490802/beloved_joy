@@ -481,6 +481,7 @@ const MyAccount = ({ toggleAccount, accountOpen }) => {
                             <div className="c-my-account-list mt-3 mb-3 d-flex flex-column align-items-start">
 
                                 <button
+                                    name="button"
                                     className={`mt-1 c-my-account-list-button ${personalInfo.state ? "is-active" : ""}`}
                                     onClick={() => {
                                         togglePersonalInfo()
@@ -494,6 +495,7 @@ const MyAccount = ({ toggleAccount, accountOpen }) => {
                                 </button>
 
                                 <button
+                                    name="button"
                                     className={`mt-1 c-my-account-list-button ${orders.state ? "is-active" : ""}`}
                                     onClick={() => {
                                         toggleOrders()
@@ -507,6 +509,7 @@ const MyAccount = ({ toggleAccount, accountOpen }) => {
                                 </button>
 
                                 <button
+                                    name="button"
                                     className={`mt-1 c-my-account-list-button ${newsletter.state ? "is-active" : ""}`}
                                     onClick={() => {
                                         toggleNewsletter()
@@ -520,6 +523,7 @@ const MyAccount = ({ toggleAccount, accountOpen }) => {
                                 </button>
 
                                 <button
+                                    name="button"
                                     className={`mt-1 c-my-account-list-button ${changePass.state ? "is-active" : ""}`}
                                     onClick={() => {
                                         toggleChangePass()
@@ -533,6 +537,7 @@ const MyAccount = ({ toggleAccount, accountOpen }) => {
                                 </button>
 
                                 <button
+                                    name="button"
                                     className="mt-3 c-my-account-list-button"
                                     onClick={() => {
                                         toggleLogout()

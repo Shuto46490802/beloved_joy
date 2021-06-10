@@ -38,6 +38,7 @@ const OrderDetail = ({ orderDetail, setOrderNumber, setOrderDetail }) => {
                 </div>
 
                 <button
+                    name="button"
                     className="c-login-back-button"
                     onClick={() => {
                         setOrderNumber("")
@@ -97,7 +98,7 @@ const OrderDetail = ({ orderDetail, setOrderNumber, setOrderDetail }) => {
 
                                                     <figure className="fig-wrapper">
 
-                                                        <Image src={item.image} layout="fill" />
+                                                        <Image src={item.image} layout="fill" alt="" />
 
                                                     </figure>
 

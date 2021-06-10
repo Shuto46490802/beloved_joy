@@ -142,6 +142,7 @@ const ProductIntro = ({ product, getScrollProxy, setQuantity, quantity }) => {
                             <div className="button__wrapper w-100 should-animate">
 
                                 <button
+                                    name="button"
                                     className="button d-inline-block w-100"
                                     onClick={(e) => {
                                         addToCart(e, product, quantity)
@@ -169,6 +170,7 @@ const ProductIntro = ({ product, getScrollProxy, setQuantity, quantity }) => {
                         <div className="qty-button small d-flex flex-center ps-1 pe-1 pt-6 pb-6 pt-md-0 pb-md-0 mb-md-0 col-md-4 col-12">
 
                             <button
+                                name="button"
                                 onClick={() => {
                                     handleDecrement()
                                 }}
@@ -185,6 +187,7 @@ const ProductIntro = ({ product, getScrollProxy, setQuantity, quantity }) => {
                             </span>
 
                             <button
+                                name="button"
                                 onClick={() => {
                                     handleIncrement()
                                 }}

@@ -601,7 +601,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Privacy Policy</strong></h3>
 
-                <button onClick={() => { setIsTextWrapperOpen1(!isTextWrapperOpen1) }} className="d-md-none d-block">
+                <button name="button" onClick={() => { setIsTextWrapperOpen1(!isTextWrapperOpen1) }} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Privacy Policy</strong></h3>
                 </button>
 
@@ -635,7 +635,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Interpretation</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen2(!isTextWrapperOpen2)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen2(!isTextWrapperOpen2)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Interpretation</strong></h3>
                 </button>
 
@@ -663,7 +663,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Definitions</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen3(!isTextWrapperOpen3)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen3(!isTextWrapperOpen3)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Definitions</strong></h3>
                 </button>
 
@@ -763,7 +763,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Information Collected and Use</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen4(!isTextWrapperOpen4)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen4(!isTextWrapperOpen4)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Information Collected and Use</strong></h3>
                 </button>
 
@@ -787,7 +787,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Personal Data</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen5(!isTextWrapperOpen5)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen5(!isTextWrapperOpen5)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Personal Data</strong></h3>
                 </button>
 
@@ -851,7 +851,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Usage Data</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen6(!isTextWrapperOpen6)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen6(!isTextWrapperOpen6)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Usage Data</strong></h3>
                 </button>
 
@@ -885,7 +885,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Tracking Technologies and Cookies</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen7(!isTextWrapperOpen7)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen7(!isTextWrapperOpen7)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Tracking Technologies and Cookies</strong></h3>
                 </button>
 
@@ -951,7 +951,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Use of Your Personal Data</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen8(!isTextWrapperOpen8)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen8(!isTextWrapperOpen8)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Use of Your Personal Data</strong></h3>
                 </button>
 
@@ -1049,7 +1049,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Retention of Your Personal Data</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen9(!isTextWrapperOpen9)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen9(!isTextWrapperOpen9)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Retention of Your Personal Data</strong></h3>
                 </button>
 
@@ -1075,7 +1075,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Transfer of Your Personal Data</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen10(!isTextWrapperOpen10)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen10(!isTextWrapperOpen10)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Transfer of Your Personal Data</strong></h3>
                 </button>
 
@@ -1107,7 +1107,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Business Transactions</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen11(!isTextWrapperOpen11)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen11(!isTextWrapperOpen11)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Business Transactions</strong></h3>
                 </button>
 
@@ -1129,7 +1129,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Law enforcement</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen12(!isTextWrapperOpen12)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen12(!isTextWrapperOpen12)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Law enforcement</strong></h3>
                 </button>
 
@@ -1151,7 +1151,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Other legal requirements</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen13(!isTextWrapperOpen13)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen13(!isTextWrapperOpen13)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Other legal requirements</strong></h3>
                 </button>
 
@@ -1189,7 +1189,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Security of Your Personal Data</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen14(!isTextWrapperOpen14)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen14(!isTextWrapperOpen14)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Security of Your Personal Data</strong></h3>
                 </button>
 
@@ -1211,7 +1211,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Children's Privacy</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen15(!isTextWrapperOpen15)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen15(!isTextWrapperOpen15)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Children's Privacy</strong></h3>
                 </button>
 
@@ -1237,7 +1237,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Analytics</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen16(!isTextWrapperOpen16)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen16(!isTextWrapperOpen16)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Analytics</strong></h3>
                 </button>
 
@@ -1281,7 +1281,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Payments</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen17(!isTextWrapperOpen17)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen17(!isTextWrapperOpen17)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Payments</strong></h3>
                 </button>
 
@@ -1337,7 +1337,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Links to Other Websites</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen18(!isTextWrapperOpen18)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen18(!isTextWrapperOpen18)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Links to Other Websites</strong></h3>
                 </button>
 
@@ -1363,7 +1363,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Changes to this Privacy Policy</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen19(!isTextWrapperOpen19)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen19(!isTextWrapperOpen19)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Changes to this Privacy Policy</strong></h3>
                 </button>
 
@@ -1393,7 +1393,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Contact Us</strong></h3>
 
-                <button onClick={() => setIsTextWrapperOpen20(!isTextWrapperOpen20)} className="d-md-none d-block">
+                <button name="button" onClick={() => setIsTextWrapperOpen20(!isTextWrapperOpen20)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Contact Us</strong></h3>
                 </button>
 

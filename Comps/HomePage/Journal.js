@@ -404,7 +404,7 @@ const Journal = ({ getScrollProxy }) => {
 
             <div className="arrow-wrapper right position-absolute swiper-button-next">
 
-                <button>
+                <button name="arrow">
 
                     <figure className="fig-wrapper">
 
@@ -418,7 +418,7 @@ const Journal = ({ getScrollProxy }) => {
 
             <div className="arrow-wrapper left position-absolute swiper-button-prev ">
 
-                <button>
+                <button name="arrow">
 
                     <figure className="fig-wrapper">
 

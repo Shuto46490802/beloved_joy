@@ -150,6 +150,7 @@ const Search = ({ searchOpen, toggleSearch }) => {
                         />
 
                         <button
+                            name="button"
                             type="button"
                             onClick={(e) => {
                                 if (isValidated) {

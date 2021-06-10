@@ -357,29 +357,36 @@ const ProductDetail = ({ product, products, headerRef, humburgerRef, toggleNewsl
   }
 
   return (
-    <div ref={scrollerRef} className="page">
+    <>
+      <Head>
+        <title>Beloved Joy | {product.name}</title>
+      </Head>
 
-      <div className="components-wrapper">
+      <div ref={scrollerRef} className="page">
 
-        <div className="c-product overflow-hidden">
+        <div className="components-wrapper">
 
-          <Intro product={product} getScrollProxy={getScrollProxy} setQuantity={setQuantity} quantity={quantity} setIsCartAdded={setIsCartAdded} />
+          <div className="c-product overflow-hidden">
 
-          <Description product={product} getScrollProxy={getScrollProxy} />
+            <Intro product={product} getScrollProxy={getScrollProxy} setQuantity={setQuantity} quantity={quantity} setIsCartAdded={setIsCartAdded} />
 
-          <TwoImages getScrollProxy={getScrollProxy} img1={img2} img2={img3} />
+            <Description product={product} getScrollProxy={getScrollProxy} />
 
-          <Policy getScrollProxy={getScrollProxy} />
+            <TwoImages getScrollProxy={getScrollProxy} img1={img2} img2={img3} />
 
-          <Recommendation products={products} getScrollProxy={getScrollProxy} />
+            <Policy getScrollProxy={getScrollProxy} />
+
+            <Recommendation products={products} getScrollProxy={getScrollProxy} />
+
+          </div>
 
         </div>
 
+        <Footer getScrollProxy={getScrollProxy} toggleNewsletterPopup={toggleNewsletterPopup} />
+
       </div>
 
-      <Footer getScrollProxy={getScrollProxy} toggleNewsletterPopup={toggleNewsletterPopup} />
-
-    </div>
+    </>
   );
 }
 

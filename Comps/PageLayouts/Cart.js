@@ -104,7 +104,7 @@ const Cart = ({ toggleCart, cartOpen }) => {
 
                 setTotalPrice(_totalPrice + ".00")
 
-            }else{
+            } else {
 
                 setTotalPrice(cartDetails[0].product.price)
 
@@ -159,7 +159,7 @@ const Cart = ({ toggleCart, cartOpen }) => {
 
                                                         <figure className="fig-wrapper">
 
-                                                            <Image src={product.product.images[0].src} layout="fill" />
+                                                            <Image alt="" src={product.product.images[0].src} layout="fill" />
 
                                                         </figure>
 
@@ -192,6 +192,7 @@ const Cart = ({ toggleCart, cartOpen }) => {
                                                         </span>
 
                                                         <button
+                                                            name="button"
                                                             onClick={(e) => {
                                                                 decreaseQuantity(e, product)
                                                             }}
@@ -202,6 +203,7 @@ const Cart = ({ toggleCart, cartOpen }) => {
                                                         <span className="mx-7">{product.quantity}</span>
 
                                                         <button
+                                                            name="button"
                                                             onClick={(e) => {
                                                                 increaseQuantity(e, product)
                                                             }}
@@ -212,6 +214,7 @@ const Cart = ({ toggleCart, cartOpen }) => {
                                                     </div>
 
                                                     <button
+                                                        name="button"
                                                         onClick={(e) => {
                                                             deleteProduct(e, product)
                                                         }}
@@ -248,8 +251,8 @@ const Cart = ({ toggleCart, cartOpen }) => {
                                     <span>
                                         {
                                             totalPrice > 0
-                                                ? "$" + totalPrice 
-                                                : "$0" 
+                                                ? "$" + totalPrice
+                                                : "$0"
                                         }
                                     </span>
 
@@ -258,6 +261,7 @@ const Cart = ({ toggleCart, cartOpen }) => {
                             </div>
 
                             <button
+                                name="button"
                                 className="mt-1 w-100 button onTop d-flex flex-center flex-grow"
                                 onClick={(e) => {
                                     redirectToCheckout(e, lineItems)
@@ -281,7 +285,7 @@ const Cart = ({ toggleCart, cartOpen }) => {
 
                 </div>
 
-                <button ref={overlayRef} onClick={() => { toggleCart() }} className="c-cart__overlay position-absolute h-100 w-100 t-0 l-0" />
+                <button name="button" ref={overlayRef} onClick={() => { toggleCart() }} className="c-cart__overlay position-absolute h-100 w-100 t-0 l-0" />
 
             </div>
 

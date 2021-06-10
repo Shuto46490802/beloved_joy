@@ -495,7 +495,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
                                         <div ref={clothingAccordionRef} className="filter__items d-flex flex-column">
 
                                             <div onClick={() => setClothingData("viewall")} className="filter__item d-flex flex-column mb-1 align-items-start">
-                                                <button className="filter__item__link d-inline-block">
+                                                <button name="side-bar-button" className="filter__item__link d-inline-block">
                                                     <span style={clothingData === "viewall" ? { opacity: 1 } : {}} className="filter__item__text h6 position-relative text-white">
                                                         View all
                                                         </span>
@@ -503,7 +503,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
                                             </div>
 
                                             <div onClick={() => setClothingData("top")} className="filter__item d-flex flex-column mb-1 align-items-start">
-                                                <button className="filter__item__link d-inline-block">
+                                                <button name="side-bar-button" className="filter__item__link d-inline-block">
                                                     <span style={clothingData === "top" ? { opacity: 1 } : {}} className="filter__item__text h6 position-relative text-white">
                                                         Top
                                                             <span className="filter-text__count">{top.length}</span>
@@ -512,7 +512,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
                                             </div>
 
                                             <div onClick={() => setClothingData("bottom")} className="filter__item d-flex flex-column mb-1 align-items-start">
-                                                <button className="filter__item__link d-inline-block">
+                                                <button name="side-bar-button" className="filter__item__link d-inline-block">
                                                     <span style={clothingData === "bottom" ? { opacity: 1 } : {}} className="filter__item__text h6 position-relative text-white">
                                                         Bottom
                                                             <span className="filter-text__count">{bottom.length}</span>
@@ -521,7 +521,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
                                             </div>
 
                                             <div onClick={() => setClothingData("intimates")} className="filter__item d-flex flex-column mb-1 align-items-start">
-                                                <button className="filter__item__link d-inline-block">
+                                                <button name="side-bar-button" className="filter__item__link d-inline-block">
                                                     <span style={clothingData === "intimates" ? { opacity: 1 } : {}} className="filter__item__text h6 position-relative text-white">
                                                         Intimates
                                                             <span className="filter-text__count">{intimates.length}</span>
@@ -555,7 +555,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
                                         <div ref={shoesAccordionRef} className="filter__items d-flex flex-column">
 
                                             <div onClick={() => setShoesData("viewall")} className="filter__item d-flex flex-column mb-1 align-items-start">
-                                                <button className="filter__item__link d-inline-block">
+                                                <button name="side-bar-button" className="filter__item__link d-inline-block">
                                                     <span style={shoesData === "viewall" ? { opacity: 1 } : {}} className="filter__item__text h6 position-relative text-white">
                                                         View all
                                                         </span>
@@ -563,7 +563,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
                                             </div>
 
                                             <div onClick={() => setShoesData("sneakers")} className="filter__item d-flex flex-column mb-1 align-items-start">
-                                                <button className="filter__item__link d-inline-block">
+                                                <button name="side-bar-button" className="filter__item__link d-inline-block">
                                                     <span style={shoesData === "sneakers" ? { opacity: 1 } : {}} className="filter__item__text h6 position-relative text-white">
                                                         Sneakers
                                                             <span className="filter-text__count">{sneakers.length}</span>
@@ -572,7 +572,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
                                             </div>
 
                                             <div onClick={() => setShoesData("boots")} className="filter__item d-flex flex-column mb-1 align-items-start">
-                                                <button className="filter__item__link d-inline-block">
+                                                <button name="side-bar-button" className="filter__item__link d-inline-block">
                                                     <span style={shoesData === "boots" ? { opacity: 1 } : {}} className="filter__item__text h6 position-relative text-white">
                                                         Boots
                                                             <span className="filter-text__count">{boots.length}</span>
@@ -581,7 +581,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
                                             </div>
 
                                             <div onClick={() => setShoesData("flats")} className="filter__item d-flex flex-column mb-1 align-items-start">
-                                                <button className="filter__item__link d-inline-block">
+                                                <button name="side-bar-button" className="filter__item__link d-inline-block">
                                                     <span style={shoesData === "flats" ? { opacity: 1 } : {}} className="filter__item__text h6 position-relative text-white">
                                                         Flats
                                                             <span className="filter-text__count">{flats.length}</span>
@@ -590,7 +590,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
                                             </div>
 
                                             <div onClick={() => setShoesData("sandals")} className="filter__item d-flex flex-column mb-1 align-items-start">
-                                                <button className="filter__item__link d-inline-block">
+                                                <button name="side-bar-button" className="filter__item__link d-inline-block">
                                                     <span style={shoesData === "sandals" ? { opacity: 1 } : {}} className="filter__item__text h6 position-relative text-white">
                                                         Sandals
                                                             <span className="filter-text__count">{sandals.length}</span>
@@ -625,7 +625,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
                                         <div ref={accessoriesAccordionRef} className="filter__items d-flex flex-column">
 
                                             <div onClick={() => setAccessoriesData("viewall")} className="filter__item d-flex flex-column mb-1 align-items-start">
-                                                <button className="filter__item__link d-inline-block">
+                                                <button name="side-bar-button" className="filter__item__link d-inline-block">
                                                     <span style={accessoriesData === "viewall" ? { opacity: 1 } : {}} className="filter__item__text h6 position-relative text-white">
                                                         View all
                                                         </span>
@@ -633,7 +633,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
                                             </div>
 
                                             <div onClick={() => setAccessoriesData("earings")} className="filter__item d-flex flex-column mb-1 align-items-start">
-                                                <button className="filter__item__link d-inline-block">
+                                                <button name="side-bar-button" className="filter__item__link d-inline-block">
                                                     <span style={accessoriesData === "earings" ? { opacity: 1 } : {}} className="filter__item__text h6 position-relative text-white">
                                                         Earings
                                                             <span className="filter-text__count">{earings.length}</span>
@@ -642,7 +642,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
                                             </div>
 
                                             <div onClick={() => setAccessoriesData("rings")} className="filter__item d-flex flex-column mb-1 align-items-start">
-                                                <button className="filter__item__link d-inline-block">
+                                                <button name="side-bar-button" className="filter__item__link d-inline-block">
                                                     <span style={accessoriesData === "rings" ? { opacity: 1 } : {}} className="filter__item__text h6 position-relative text-white">
                                                         Rings
                                                             <span className="filter-text__count">{rings.length}</span>
@@ -651,7 +651,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
                                             </div>
 
                                             <div onClick={() => setAccessoriesData("necklace")} className="filter__item d-flex flex-column mb-1 align-items-start">
-                                                <button className="filter__item__link d-inline-block">
+                                                <button name="side-bar-button" className="filter__item__link d-inline-block">
                                                     <span style={accessoriesData === "necklace" ? { opacity: 1 } : {}} className="filter__item__text h6 position-relative text-white">
                                                         Necklace
                                                             <span className="filter-text__count">{necklace.length}</span>

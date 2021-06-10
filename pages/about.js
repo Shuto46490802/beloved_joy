@@ -151,32 +151,39 @@ const About = ({ products, aboutIntroImageWrapperRef, aboutIntroHeadingWrapperRe
   }
 
   return (
-    <div ref={scrollerRef} className="page">
+    <>
+      <Head>
+        <title>Beloved Joy | About</title>
+      </Head>
 
-      <div className="components-wrapper">
+      <div ref={scrollerRef} className="page">
 
-        <Intro
-          getScrollProxy={getScrollProxy}
-          aboutIntroImageWrapperRef={aboutIntroImageWrapperRef}
-          aboutIntroHeadingWrapperRef={aboutIntroHeadingWrapperRef}
-          aboutIntroHeadingRef={aboutIntroHeadingRef}
-          aboutIntroCaptionRef={aboutIntroCaptionRef}
-          aboutIntroCaptionWrapperRef={aboutIntroCaptionWrapperRef}
-        />
+        <div className="components-wrapper">
 
-        <AboutUs getScrollProxy={getScrollProxy} />
+          <Intro
+            getScrollProxy={getScrollProxy}
+            aboutIntroImageWrapperRef={aboutIntroImageWrapperRef}
+            aboutIntroHeadingWrapperRef={aboutIntroHeadingWrapperRef}
+            aboutIntroHeadingRef={aboutIntroHeadingRef}
+            aboutIntroCaptionRef={aboutIntroCaptionRef}
+            aboutIntroCaptionWrapperRef={aboutIntroCaptionWrapperRef}
+          />
 
-        <Philosophy getScrollProxy={getScrollProxy} />
+          <AboutUs getScrollProxy={getScrollProxy} />
 
-        <GoalTop getScrollProxy={getScrollProxy} />
+          <Philosophy getScrollProxy={getScrollProxy} />
 
-        <GoalBottom getScrollProxy={getScrollProxy} />
+          <GoalTop getScrollProxy={getScrollProxy} />
+
+          <GoalBottom getScrollProxy={getScrollProxy} />
+
+        </div>
+
+        <Footer getScrollProxy={getScrollProxy} toggleNewsletterPopup={toggleNewsletterPopup} />
 
       </div>
 
-      <Footer getScrollProxy={getScrollProxy} toggleNewsletterPopup={toggleNewsletterPopup} />
-
-    </div>
+    </>
   );
 }
 

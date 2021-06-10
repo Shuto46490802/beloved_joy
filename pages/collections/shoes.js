@@ -235,36 +235,41 @@ const Shoes = ({ shoesData, products, headerRef, humburgerRef, }) => {
     }
 
     return (
+        <>
+        <Head>
+        <title>Beloved Joy | Shoes</title>
+      </Head>
 
-        <TransitionGroup className="position-static">
+            <TransitionGroup className="position-static">
 
-            <Transition
-                timeout={750}
-                key={shoesData}
-                onEnter={onEnter}
-                onExit={onExit}
-            >
+                <Transition
+                    timeout={750}
+                    key={shoesData}
+                    onEnter={onEnter}
+                    onExit={onExit}
+                >
 
-                <Content
-                    scrollerRef={scrollerRef}
-                    products={
-                        shoesData === "viewall"
-                            ? viewAll
-                            : shoesData === "sneakers"
-                                ? sneakers
-                                : shoesData === "boots"
-                                    ? boots
-                                    : shoesData === "flats"
-                                        ? flats
-                                        : shoesData === "sandals"
-                                            ? sandals
-                                            : null
-                    } />
+                    <Content
+                        scrollerRef={scrollerRef}
+                        products={
+                            shoesData === "viewall"
+                                ? viewAll
+                                : shoesData === "sneakers"
+                                    ? sneakers
+                                    : shoesData === "boots"
+                                        ? boots
+                                        : shoesData === "flats"
+                                            ? flats
+                                            : shoesData === "sandals"
+                                                ? sandals
+                                                : null
+                        } />
 
-            </Transition>
+                </Transition>
 
-        </TransitionGroup >
+            </TransitionGroup >
 
+        </>
     );
 }
 
