@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "../PageLayouts/Link";
 
-const InstagramFigure = ({ img, link, caption, date, index, addToImageRefs }) => {
+const InstagramFigure = ({ img, index, addToImageRefs }) => {
 
     return (
         <div ref={addToImageRefs} className={`c-instagram__figure should-animate`}>

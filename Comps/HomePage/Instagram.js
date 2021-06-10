@@ -160,10 +160,7 @@ const Instagram = ({ instagramData, getScrollProxy }) => {
                     {
                         instagramData.map((data, i) => (
                             <InstagramFigure
-                                link={`${data.link}`}
                                 img={`${data.mediaURL}`}
-                                caption={`${data.caption}`}
-                                date={data.time}
                                 index={i}
                                 addToImageRefs={addToImageRefs}
                                 key={i}

@@ -16,6 +16,9 @@ import { gsap } from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { ScrollbarPlugin } from 'smooth-scrollbar';
 
+import { createClient } from "contentful";
+import image from "next/image";
+
 const handleDate = (_date) => {
 
   let _year = _date.slice(0, 4);
@@ -132,22 +135,17 @@ export const getStaticProps = async () => {
 
   const availabelProducts = data.products.edges.filter((product) => product.node.availableForSale);
 
-  const instaData = await fetch(`https://graph.facebook.com/v11.0/${process.env.INSTAGRAM_ACCOUNT_ID}?fields=name,media.limit(12){caption,media_url,thumbnail_url,permalink,like_count,comments_count,media_type,timestamp}&access_token=${process.env.INSTAGRAM_ACCESS_KEY}`)
-    .then(async (res) => {
-      return res.json();
-    })
-    .catch((error) => {
-      console.log(error)
-    })
+  const contentfulClient = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY
+  })
+
+  const contentfulRes = await contentfulClient.getEntries({
+    content_type: "instagramImage"
+  })
 
   return {
     props: {
-      instagramData: instaData.media.data.map((data) => ({
-        caption: data.caption,
-        mediaURL: data.media_url,
-        time: handleDate(data.timestamp),
-        link: data.permalink
-      })),
       products: availabelProducts.map((product) => ({
         available: product.node.availableForSale,
         description: product.node.description,
@@ -169,6 +167,9 @@ export const getStaticProps = async () => {
         brand: product.node.vendor,
         tags: product.node.tags,
       })),
+      instagramData: contentfulRes.items.map((item) => ({
+        mediaURL: "https:" + item.fields.instagramImage.fields.file.url
+      }))
     }
   }
 }
@@ -198,13 +199,12 @@ EdgeEasingPlugin.pluginName = 'edgeEasing';
 
 Scrollbar.use(EdgeEasingPlugin);
 
-const HomePage = ({ headerRef, humburgerRef, res3, products, instagramData, addToHeadingRefs, addToCaptionLeftRefs, addToCaptionRightRefs, headingRefs, introImageWrapperRef, captionLeftRefs, captionRightRefs, introHeadingWrapperRef, toggleNewsletterPopup }) => {
+const HomePage = ({ headerRef, humburgerRef, products, instagramData, addToHeadingRefs, addToCaptionLeftRefs, addToCaptionRightRefs, headingRefs, introImageWrapperRef, captionLeftRefs, captionRightRefs, introHeadingWrapperRef, toggleNewsletterPopup }) => {
 
   const scrollerRef = useRef();
 
   useEffect(() => {
     getScrollProxy();
-    console.log(res3)
   }, [])
 
   const getScrollProxy = () => {
