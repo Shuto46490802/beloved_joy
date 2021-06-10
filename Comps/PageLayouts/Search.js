@@ -150,6 +150,7 @@ const Search = ({ searchOpen, toggleSearch }) => {
                         />
 
                         <button
+                            ariaLabel="button"
                             name="button"
                             type="button"
                             onClick={(e) => {

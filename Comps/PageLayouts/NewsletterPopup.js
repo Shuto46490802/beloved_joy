@@ -227,6 +227,7 @@ const NewsletterPopup = ({ toggleNewsletterPopup, newsletterPopupOpen, humburger
                         </div>
 
                         <button
+                        ariaLabel="button"
                         name="button"
                         type="button"
                         className="button onTop w-50 align-self-center"

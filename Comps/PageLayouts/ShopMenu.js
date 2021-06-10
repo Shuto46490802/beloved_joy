@@ -640,7 +640,7 @@ const ShopMenu = ({ shopMenuOpen, toggleShopMenu, numOfShopAll, numOfNewArrivals
     return (
         <div ref={shopMenuRef} className="c-shop-menu position-fixed t-0 l-0 d-md-flex d-none" >
             <div ref={backgroundRef} className="n-background" />
-            <Link href="/">
+            <Link ariaLabel="home" href="/">
                 <a ref={addToInnerRefs} className="c-shop-menu__images col-6  h-100 position-absolute" onClick={() => toggleShopMenu()}>
                     <div className="c-shop-menu__images__image w-100 h-100 position-absolute t-0 l-0">
                         <figure ref={img1Ref} className="fig-wrapper">
@@ -682,7 +682,7 @@ const ShopMenu = ({ shopMenuOpen, toggleShopMenu, numOfShopAll, numOfNewArrivals
                             className="c-shop-menu__list__item my-2"
                             onMouseEnter={() => toggleImg1()}
                         >
-                            <Link href="/collections/shop-all">
+                            <Link ariaLabel="shop all" href="/collections/shop-all">
                                 <a onClick={() => toggleShopMenu()} className="c-shop-menu__list__link text-white w-100">
                                     <span ref={addToTextRefs} className="c-shop-menu__list__link__text menu-link__text lh-1">
                                         Shop all
@@ -695,7 +695,7 @@ const ShopMenu = ({ shopMenuOpen, toggleShopMenu, numOfShopAll, numOfNewArrivals
                             className="c-shop-menu__list__item my-2"
                             onMouseEnter={() => toggleImg2()}
                         >
-                            <Link href="/collections/new-arrivals">
+                            <Link ariaLabel="new arrivals" href="/collections/new-arrivals">
                                 <a onClick={() => toggleShopMenu()} className="c-shop-menu__list__link text-white w-100">
                                     <span ref={addToTextRefs} className="c-shop-menu__list__link__text menu-link__text lh-1">
                                         New arrivals
@@ -708,7 +708,7 @@ const ShopMenu = ({ shopMenuOpen, toggleShopMenu, numOfShopAll, numOfNewArrivals
                             className="c-shop-menu__list__item my-2"
                             onMouseEnter={() => toggleImg3()}
                         >
-                            <Link href="/collections/clothing">
+                            <Link ariaLabel="clothing" href="/collections/clothing">
                                 <a onClick={() => toggleShopMenu()} className="c-shop-menu__list__link text-white w-100">
                                     <span ref={addToTextRefs} className="c-shop-menu__list__link__text menu-link__text lh-1">
                                         Clothing
@@ -721,7 +721,7 @@ const ShopMenu = ({ shopMenuOpen, toggleShopMenu, numOfShopAll, numOfNewArrivals
                             className="c-shop-menu__list__item my-2"
                             onMouseEnter={() => toggleImg4()}
                         >
-                            <Link href="/collections/shoes">
+                            <Link ariaLabel="shoes" href="/collections/shoes">
                                 <a onClick={() => toggleShopMenu()} className="c-shop-menu__list__link text-white w-100">
                                     <span ref={addToTextRefs} className="c-shop-menu__list__link__text menu-link__text lh-1">
                                         Shoes
@@ -734,7 +734,7 @@ const ShopMenu = ({ shopMenuOpen, toggleShopMenu, numOfShopAll, numOfNewArrivals
                             className="c-shop-menu__list__item my-2"
                             onMouseEnter={() => toggleImg5()}
                         >
-                            <Link href="/collections/accessories">
+                            <Link ariaLabel="accessories" href="/collections/accessories">
                                 <a onClick={() => toggleShopMenu()} className="c-shop-menu__list__link text-white w-100">
                                     <span ref={addToTextRefs} className="c-shop-menu__list__link__text menu-link__text lh-1">
                                         Accessories
@@ -747,7 +747,7 @@ const ShopMenu = ({ shopMenuOpen, toggleShopMenu, numOfShopAll, numOfNewArrivals
                             className="c-shop-menu__list__item my-2"
                             onMouseEnter={() => toggleImg6()}
                         >
-                            <Link href="/collections/homewear">
+                            <Link ariaLabel="homewear" href="/collections/homewear">
                                 <a onClick={() => toggleShopMenu()} className="c-shop-menu__list__link text-white w-100">
                                     <span ref={addToTextRefs} className="c-shop-menu__list__link__text menu-link__text lh-1">
                                         Homewear

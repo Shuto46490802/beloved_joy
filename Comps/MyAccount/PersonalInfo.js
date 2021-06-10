@@ -173,6 +173,7 @@ const PersonalInfo = () => {
             </div>
 
             <button
+                ariaLabel="button"
                 type="button"
                 className="button rectangle-button position-relative w-100 onTop"
                 onClick={async () => {

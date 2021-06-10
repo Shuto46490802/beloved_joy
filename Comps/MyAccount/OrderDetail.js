@@ -38,6 +38,7 @@ const OrderDetail = ({ orderDetail, setOrderNumber, setOrderDetail }) => {
                 </div>
 
                 <button
+                    ariaLabel="button"
                     name="button"
                     className="c-login-back-button"
                     onClick={() => {

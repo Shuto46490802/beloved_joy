@@ -725,14 +725,14 @@ const Content = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Agreement to Terms</strong></h3>
 
-                <button name="button" onClick={() => setIsTextWrapperOpen1(!isTextWrapperOpen1)} className="d-md-none d-block">
+                <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen1(!isTextWrapperOpen1)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Agreement to Terms</strong></h3>
                 </button>
 
                 <div ref={addToTextWrapperRefs} className="text-wrapper d-md-none d-block">
 
                     <p >
-                        These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and MY COMPANY  ("<strong>Company</strong>", “<strong>we</strong>”, “<strong>us</strong>”, or “<strong>our</strong>”), concerning your access to and use of the <Link href="/"><a>https//http://www.belovedjoy.com</a></Link> website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”). You agree that by accessing the Site, you have read, understood, and agreed to be bound by all of these Terms of Use. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF USE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE AND YOU MUST DISCONTINUE USE IMMEDIATELY.
+                        These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and MY COMPANY  ("<strong>Company</strong>", “<strong>we</strong>”, “<strong>us</strong>”, or “<strong>our</strong>”), concerning your access to and use of the <Link ariaLabel="home" href="/"><a>https//http://www.belovedjoy.com</a></Link> website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”). You agree that by accessing the Site, you have read, understood, and agreed to be bound by all of these Terms of Use. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF USE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE AND YOU MUST DISCONTINUE USE IMMEDIATELY.
                     </p>
 
                     <p>
@@ -752,7 +752,7 @@ const Content = ({ addToSectionRefs }) => {
                 <div className="text-wrapper d-md-block d-none">
 
                     <p >
-                        These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and MY COMPANY  ("<strong>Company</strong>", “<strong>we</strong>”, “<strong>us</strong>”, or “<strong>our</strong>”), concerning your access to and use of the <Link href="/"><a>https//http://www.belovedjoy.com</a></Link> website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”). You agree that by accessing the Site, you have read, understood, and agreed to be bound by all of these Terms of Use. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF USE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE AND YOU MUST DISCONTINUE USE IMMEDIATELY.
+                        These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and MY COMPANY  ("<strong>Company</strong>", “<strong>we</strong>”, “<strong>us</strong>”, or “<strong>our</strong>”), concerning your access to and use of the <Link ariaLabel="home" href="/"><a>https//http://www.belovedjoy.com</a></Link> website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”). You agree that by accessing the Site, you have read, understood, and agreed to be bound by all of these Terms of Use. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF USE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE AND YOU MUST DISCONTINUE USE IMMEDIATELY.
                     </p>
 
                     <p>
@@ -775,7 +775,7 @@ const Content = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Intellectual Property Rights</strong></h3>
 
-                <button name="button" onClick={() => setIsTextWrapperOpen2(!isTextWrapperOpen2)} className="d-md-none d-block">
+                <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen2(!isTextWrapperOpen2)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>Intellectual Property Rights</strong></h3>
                 </button>
 
@@ -843,7 +843,7 @@ const Content = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>User Representations</strong></h3>
 
-                <button name="button" onClick={() => setIsTextWrapperOpen3(!isTextWrapperOpen3)} className="d-md-none d-block">
+                <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen3(!isTextWrapperOpen3)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>User Representations</strong></h3>
                 </button>
 
@@ -891,7 +891,7 @@ const Content = ({ addToSectionRefs }) => {
 
                 <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>User Registration</strong></h3>
 
-                <button name="button" onClick={() => setIsTextWrapperOpen4(!isTextWrapperOpen4)} className="d-md-none d-block">
+                <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen4(!isTextWrapperOpen4)} className="d-md-none d-block">
                     <h3 className="mb-md-2 mb-0 pb-6"><strong>User Registration</strong></h3>
                 </button>
 
@@ -918,7 +918,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Products</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen5(!isTextWrapperOpen5)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen5(!isTextWrapperOpen5)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Products</strong></h3>
                         </button>
 
@@ -946,7 +946,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Purchases and Payment</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen6(!isTextWrapperOpen6)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen6(!isTextWrapperOpen6)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Purchases and Payment</strong></h3>
                         </button>
 
@@ -1016,7 +1016,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Prohibited Activities</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen7(!isTextWrapperOpen7)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen7(!isTextWrapperOpen7)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Prohibited Activities</strong></h3>
                         </button>
 
@@ -1096,7 +1096,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>User Generated Contributions</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen8(!isTextWrapperOpen8)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen8(!isTextWrapperOpen8)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>User Generated Contributions</strong></h3>
                         </button>
 
@@ -1164,7 +1164,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Contribution License</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen9(!isTextWrapperOpen9)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen9(!isTextWrapperOpen9)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Contribution License</strong></h3>
                         </button>
 
@@ -1205,7 +1205,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Submissions</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen10(!isTextWrapperOpen10)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen10(!isTextWrapperOpen10)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Submissions</strong></h3>
                         </button>
 
@@ -1231,7 +1231,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Third-Party Websites and Content</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen11(!isTextWrapperOpen11)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen11(!isTextWrapperOpen11)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Third-Party Websites and Content</strong></h3>
                         </button>
 
@@ -1269,7 +1269,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Site Management</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen12(!isTextWrapperOpen12)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen12(!isTextWrapperOpen12)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Site Management</strong></h3>
                         </button>
 
@@ -1295,7 +1295,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Term and Termination</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen13(!isTextWrapperOpen13)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen13(!isTextWrapperOpen13)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Term and Termination</strong></h3>
                         </button>
 
@@ -1331,7 +1331,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Modifications and Interruptions</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen14(!isTextWrapperOpen14)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen14(!isTextWrapperOpen14)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Modifications and Interruptions</strong></h3>
                         </button>
 
@@ -1365,7 +1365,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Govering Law</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen15(!isTextWrapperOpen15)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen15(!isTextWrapperOpen15)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Govering Law</strong></h3>
                         </button>
 
@@ -1391,7 +1391,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Dispute Resolution</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen16(!isTextWrapperOpen16)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen16(!isTextWrapperOpen16)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Dispute Resolution</strong></h3>
                         </button>
 
@@ -1449,7 +1449,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Corrections</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen17(!isTextWrapperOpen17)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen17(!isTextWrapperOpen17)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Corrections</strong></h3>
                         </button>
 
@@ -1475,7 +1475,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Disclaimer</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen18(!isTextWrapperOpen18)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen18(!isTextWrapperOpen18)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Disclaimer</strong></h3>
                         </button>
 
@@ -1523,7 +1523,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Limitations of Liability</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen19(!isTextWrapperOpen19)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen19(!isTextWrapperOpen19)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Limitations of Liability</strong></h3>
                         </button>
 
@@ -1555,7 +1555,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Indemnification</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen20(!isTextWrapperOpen20)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen20(!isTextWrapperOpen20)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Indemnification</strong></h3>
                         </button>
 
@@ -1591,7 +1591,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>User Data</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen21(!isTextWrapperOpen21)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen21(!isTextWrapperOpen21)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>User Data</strong></h3>
                         </button>
 
@@ -1621,7 +1621,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Electronic Communacations, Transactions, and Signatures</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen22(!isTextWrapperOpen22)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen22(!isTextWrapperOpen22)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Electronic Communacations, Transactions, and Signatures</strong></h3>
                         </button>
 
@@ -1653,7 +1653,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Miscellaneous</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen23(!isTextWrapperOpen23)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen23(!isTextWrapperOpen23)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Miscellaneous</strong></h3>
                         </button>
 
@@ -1695,7 +1695,7 @@ const Content = ({ addToSectionRefs }) => {
 
                         <h3 className="mb-md-2 mb-0 pb-6 d-md-block d-none"><strong>Contact Us</strong></h3>
 
-                        <button name="button" onClick={() => setIsTextWrapperOpen24(!isTextWrapperOpen24)} className="d-md-none d-block">
+                        <button ariaLabel="button" name="button" onClick={() => setIsTextWrapperOpen24(!isTextWrapperOpen24)} className="d-md-none d-block">
                             <h3 className="mb-md-2 mb-0 pb-6"><strong>Contact Us</strong></h3>
                         </button>
 

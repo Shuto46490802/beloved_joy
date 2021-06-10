@@ -255,6 +255,7 @@ const Footer = ({ getScrollProxy, footerRef, toggleNewsletterPopup, currentPage 
                                         </h4>
 
                                         <button
+                                            ariaLabel="button"
                                             name="button"
                                             onClick={() => toggleNewsletterPopup()}
                                             ref={formRef}
@@ -322,7 +323,7 @@ const Footer = ({ getScrollProxy, footerRef, toggleNewsletterPopup, currentPage 
 
                             <div ref={socialLinkWrapperRef} className="footer__content__social__links  d-md-flex flex-column mt-md-4 mt-1 ">
 
-                                <Link href="/">
+                                <Link ariaLabel="instagram" href="/">
 
                                     <a className="footer__content__social__link d-flex align-items-center link mr-md-6 mb-6 color-light-red ">
 
@@ -336,7 +337,7 @@ const Footer = ({ getScrollProxy, footerRef, toggleNewsletterPopup, currentPage 
 
                                 </Link>
 
-                                <Link href="/">
+                                <Link ariaLabel="poshmark" href="/">
 
                                     <a className="footer__content__social__link  d-flex align-items-center link mr-md-6 mb-6 color-light-red ">
 
@@ -360,7 +361,7 @@ const Footer = ({ getScrollProxy, footerRef, toggleNewsletterPopup, currentPage 
 
                             <div ref={privacyLinkWrapperRef} className="footer__content__policies__links d-flex flex-md-row flex-column justify-content-md-between mb-2 mb-md-0 mt-6">
 
-                                <Link href="/contact" scroll={router.pathname.includes("contact") ? false : true}>
+                                <Link ariaLabel="contact" href="/contact" scroll={router.pathname.includes("contact") ? false : true}>
 
                                     <a className="footer__content__policies__link mb-6 color-light-red" >
                                         <div className="overflow-hidden ">
@@ -370,7 +371,7 @@ const Footer = ({ getScrollProxy, footerRef, toggleNewsletterPopup, currentPage 
 
                                 </Link>
 
-                                <Link href="/privacy/privacy-policy" scroll={router.pathname.includes("privacy-policy") ? false : true}>
+                                <Link ariaLabel="privacy policy" href="/privacy/privacy-policy" scroll={router.pathname.includes("privacy-policy") ? false : true}>
 
                                     <a className="footer__content__policies__link  mb-6">
                                         <div className="overflow-hidden ">
@@ -380,7 +381,7 @@ const Footer = ({ getScrollProxy, footerRef, toggleNewsletterPopup, currentPage 
 
                                 </Link>
 
-                                <Link href="/privacy/terms-conditions" scroll={router.pathname.includes("terms-conditions") ? false : true}>
+                                <Link ariaLabel="terms conditions" href="/privacy/terms-conditions" scroll={router.pathname.includes("terms-conditions") ? false : true}>
 
                                     <a className="footer__content__policies__link  mb-6" >
                                         <div className="overflow-hidden ">

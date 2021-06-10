@@ -277,7 +277,7 @@ const FeaturedProducts = ({ getScrollProxy, products }) => {
 
                 <div ref={buttonWrapperRef} className="c-featured-products__link overflow-hidden d-md-none">
 
-                    <Link href="/collections/new-arrivals">
+                    <Link ariaLabel="new arrivals" href="/collections/new-arrivals">
 
                         <a ref={buttonRef} className="c-featured-products__link nav-link position-relative w-100 h-100 text-white">
 
@@ -327,7 +327,7 @@ const FeaturedProducts = ({ getScrollProxy, products }) => {
                     >
 
                         <SwiperSlide className="c-featured-products__link__wrapper d-md-block d-none position-relative" >
-                            <Link href="/collections/new-arrivals">
+                            <Link ariaLabel="new arrivals" href="/collections/new-arrivals">
 
                                 <a ref={galleryButtonRef} className="c-featured-products__link nav-link position-relative w-100 h-100 text-white should-animate ">
 
@@ -357,7 +357,7 @@ const FeaturedProducts = ({ getScrollProxy, products }) => {
                             newArrivals.map((data, i) => {
                                 return <SwiperSlide key={i}>
 
-                                    <Link href={`/products/[slug]`} as={`/products/${data.slug}`}>
+                                    <Link ariaLabel="product" href={`/products/[slug]`} as={`/products/${data.slug}`}>
 
                                         <a className={`c-product__thumb w-100 h-100`}>
 
@@ -394,8 +394,8 @@ const FeaturedProducts = ({ getScrollProxy, products }) => {
                             })
                         }
 
-                        <button name="swiper-button-prev" className="swiper-button-prev"></button>
-                        <button name="swiper-button-next" className="swiper-button-next"></button>
+                        <button ariaLabel="button" name="swiper-button-prev" className="swiper-button-prev"></button>
+                        <button ariaLabel="button" name="swiper-button-next" className="swiper-button-next"></button>
 
                     </Swiper>
 

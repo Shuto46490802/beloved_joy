@@ -186,7 +186,7 @@ const Recommendation = ({ products, getScrollProxy }) => {
                         recommendation.map((data, i) => {
                             return <SwiperSlide key={i}>
 
-                                <Link href={`/products/[slug]`} as={`/products/${data.slug}`}>
+                                <Link ariaLabel="product" href={`/products/[slug]`} as={`/products/${data.slug}`}>
 
                                     <a
                                         className={`c-product__thumb w-100 h-100`}
@@ -225,8 +225,8 @@ const Recommendation = ({ products, getScrollProxy }) => {
                         })
                     }
 
-                    <Link href="/" scroll={false}><a className="swiper-button-prev"></a></Link>
-                    <Link href="/" scroll={false}><a className="swiper-button-next"></a></Link>
+                    <button name="button" ariaLabel="prev" className="swiper-button-prev"></button>
+                    <button name="button" ariaLabel="next" className="swiper-button-next"></button>
 
                 </Swiper>
 

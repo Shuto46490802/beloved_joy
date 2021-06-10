@@ -44,7 +44,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
 
                         <div>
 
-                            <Link href="/">
+                            <Link ariaLabel="home" href="/">
 
                                 <a>
 
@@ -67,6 +67,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
                                 <div className="nav-link d-flex flex-center ml-1 mr-1 no-wrap">
 
                                     <button
+                                        ariaLabel="button"
                                         name="button"
                                         onClick={() => {
                                             toggleShopMenu()
@@ -89,7 +90,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
 
                                 <div className="nav-link d-flex flex-center ml-1 mr-1 no-wrap">
 
-                                    <Link href="/about">
+                                    <Link ariaLabel="about" href="/about">
 
                                         <a>
 
@@ -111,7 +112,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
 
                                 <div className="nav-link d-flex flex-center ml-1 mr-1 no-wrap">
 
-                                    <Link href="/journal">
+                                    <Link ariaLabel="journal" href="/journal">
 
                                         <a>
 
@@ -135,7 +136,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
 
                     <div className="nav-icon-links__wrapper col-md-4 d-flex align-items-center justify-content-end pe-md-1 pe-xl-2">
 
-                        <button name="search-icon" className="search-icon nav-icon" onClick={() => { toggleSearch() }}>
+                        <button ariaLabel="button" name="search-icon" className="search-icon nav-icon" onClick={() => { toggleSearch() }}>
 
                             <svg x="0px" y="0px" viewBox="0 0 21 21">
 
@@ -148,6 +149,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
                         </button>
 
                         <button
+                            ariaLabel="button"
                             name="button"
                             className="nav-icon d-md-block d-none"
                             onClick={() => {
@@ -176,6 +178,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
                         </button>
 
                         <button
+                            ariaLabel="button"
                             name="button"
                             className="nav-icon d-md-none d-block"
                             onClick={() => {
@@ -199,7 +202,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
 
                         {
                             user !== null
-                                ? <button name="button" onClick={() => { toggleAccount() }} className="nav-icon ">
+                                ? <button ariaLabel="button" name="button" onClick={() => { toggleAccount() }} className="nav-icon ">
 
                                     <span className="line-link d-md-block d-none">
                                         MyAccount
@@ -217,7 +220,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
                                     </svg>
 
                                 </button>
-                                : <button name="button" onClick={() => { toggleLogin() }} className="nav-icon ">
+                                : <button ariaLabel="button" name="button" onClick={() => { toggleLogin() }} className="nav-icon ">
 
                                     <span className="line-link d-md-block d-none">
                                         Login
@@ -249,7 +252,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
 
                     <div className="c-humburger__inner d-inline-block">
 
-                        <button name="humburger" className="px-6 w-100 d-flex flex-center" onClick={() => { toggleMenu() }}>
+                        <button ariaLabel="button" name="humburger" className="px-6 w-100 d-flex flex-center" onClick={() => { toggleMenu() }}>
 
                             <div className="vertical-lines d-block">
 

@@ -92,7 +92,7 @@ const ProductIntro = ({ product, getScrollProxy, setQuantity, quantity }) => {
 
                             {
                                 product.category.map(category => {
-                                    return <Link href={`/collections/${category}`}>
+                                    return <Link ariaLabel="category" href={`/collections/${category}`}>
 
                                         <a className="me-7">
                                             {
@@ -142,6 +142,7 @@ const ProductIntro = ({ product, getScrollProxy, setQuantity, quantity }) => {
                             <div className="button__wrapper w-100 should-animate">
 
                                 <button
+                                    ariaLabel="button"
                                     name="button"
                                     className="button d-inline-block w-100"
                                     onClick={(e) => {
@@ -170,6 +171,7 @@ const ProductIntro = ({ product, getScrollProxy, setQuantity, quantity }) => {
                         <div className="qty-button small d-flex flex-center ps-1 pe-1 pt-6 pb-6 pt-md-0 pb-md-0 mb-md-0 col-md-4 col-12">
 
                             <button
+                                ariaLabel="button"
                                 name="button"
                                 onClick={() => {
                                     handleDecrement()
@@ -187,6 +189,7 @@ const ProductIntro = ({ product, getScrollProxy, setQuantity, quantity }) => {
                             </span>
 
                             <button
+                                ariaLabel="button"
                                 name="button"
                                 onClick={() => {
                                     handleIncrement()

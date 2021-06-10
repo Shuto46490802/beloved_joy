@@ -18,7 +18,7 @@ const Content = ({ products, scrollerRef }) => {
 
                                 return <div key={i} className="collections__content__item col-sm-6 col-12 p-xl-3">
 
-                                    <Link href={`/products/[slug]`} as={`/products/${data.slug}`}>
+                                    <Link ariaLabel="to product page" href={`/products/[slug]`} as={`/products/${data.slug}`}>
 
                                         <a className="collections__content__item__link d-block">
 

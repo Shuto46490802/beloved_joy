@@ -151,7 +151,7 @@ const Cart = ({ toggleCart, cartOpen }) => {
                                     cartDetails.map((product, i) => (
                                         <div key={i} className="c-cart-item d-flex flex-wrap pb-6 mt-1">
 
-                                            <Link href="/products/[slug]" as={`/products/${product.product.slug}`} >
+                                            <Link ariaLabel="product" href="/products/[slug]" as={`/products/${product.product.slug}`} >
 
                                                 <a onClick={() => toggleCart()} className="col-6 pe-6">
 
@@ -192,6 +192,7 @@ const Cart = ({ toggleCart, cartOpen }) => {
                                                         </span>
 
                                                         <button
+                                                            ariaLabel="button"
                                                             name="button"
                                                             onClick={(e) => {
                                                                 decreaseQuantity(e, product)
@@ -203,6 +204,7 @@ const Cart = ({ toggleCart, cartOpen }) => {
                                                         <span className="mx-7">{product.quantity}</span>
 
                                                         <button
+                                                            ariaLabel="button"
                                                             name="button"
                                                             onClick={(e) => {
                                                                 increaseQuantity(e, product)
@@ -214,6 +216,7 @@ const Cart = ({ toggleCart, cartOpen }) => {
                                                     </div>
 
                                                     <button
+                                                        ariaLabel="button"
                                                         name="button"
                                                         onClick={(e) => {
                                                             deleteProduct(e, product)
@@ -261,6 +264,7 @@ const Cart = ({ toggleCart, cartOpen }) => {
                             </div>
 
                             <button
+                                ariaLabel="button"
                                 name="button"
                                 className="mt-1 w-100 button onTop d-flex flex-center flex-grow"
                                 onClick={(e) => {
@@ -285,7 +289,7 @@ const Cart = ({ toggleCart, cartOpen }) => {
 
                 </div>
 
-                <button name="button" ref={overlayRef} onClick={() => { toggleCart() }} className="c-cart__overlay position-absolute h-100 w-100 t-0 l-0" />
+                <button ariaLabel="button" name="button" ref={overlayRef} onClick={() => { toggleCart() }} className="c-cart__overlay position-absolute h-100 w-100 t-0 l-0" />
 
             </div>
 

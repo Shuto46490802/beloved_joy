@@ -452,7 +452,7 @@ const HomeAbout = ({ getScrollProxy }) => {
 
                             <div ref={addToSublineRefs} className="c-home-about__link ms-xl-3 px-1 mt-xl-4 mt-lg-5 mt-md-3 mt-3 should-animate">
 
-                                <Link href="/about" >
+                                <Link ariaLabel="about" href="/about" >
 
                                     <a className="c-home-about__link__link nav-link ">
 

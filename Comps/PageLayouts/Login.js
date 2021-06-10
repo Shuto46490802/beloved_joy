@@ -226,6 +226,7 @@ const Login = ({ toggleLogin, loginOpen }) => {
             <div className="c-login__inner d-flex justify-content-center w-100 onTop">
 
                 <button
+                ariaLabel="button"
                 name="button"
                  onClick={() => { 
                     toggleLogin() 
@@ -238,6 +239,7 @@ const Login = ({ toggleLogin, loginOpen }) => {
                     <div className="d-flex justify-content-between align-items-start mb-1">
 
                         <button 
+                        ariaLabel="button"
                         name="button"
                         style={isNew === "" ? {visibility: "hidden"} : {}} 
                         className="c-login-back-button"
@@ -255,6 +257,7 @@ const Login = ({ toggleLogin, loginOpen }) => {
                         <div className="c-login-close-button d-flex flex-center">
 
                             <button 
+                            ariaLabel="button"
                             name="button"
                             onClick={() => { 
                                 toggleLogin() 
@@ -397,6 +400,7 @@ const Login = ({ toggleLogin, loginOpen }) => {
                                                 </small>
 
                                                 <button
+                                                ariaLabel="button"
                                                 name="button"
                                                     className="forgot-link__wrapper d-block"
                                                     type="button"
@@ -594,6 +598,7 @@ const Login = ({ toggleLogin, loginOpen }) => {
                             </div>
 
                             <button
+                            ariaLabel="button"
                             name="button"
                                 type="button"
                                 className="button onTop w-100"

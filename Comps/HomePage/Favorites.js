@@ -472,7 +472,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                         <div ref={addToHeadingRefs} className="c-favorites__heading__item position-relative d-flex py-1 should-animate">
 
-                            <Link href="/collections/shop-all">
+                            <Link ariaLabel="shop all" href="/collections/shop-all">
 
                                 <a className="text-white overflow-hidden">
 
@@ -490,7 +490,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                         <div ref={addToHeadingRefs} className="c-favorites__heading__item position-relative d-flex py-1 overflow-hidden should-animate">
 
-                            <Link href="/collections/new-arrivals">
+                            <Link ariaLabel="new arrivals" href="/collections/new-arrivals">
 
                                 <a className="text-white">
 
@@ -508,7 +508,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                         <div ref={addToHeadingRefs} className="c-favorites__heading__item position-relative d-flex py-1 should-animate">
 
-                            <Link href="/collections/clothing">
+                            <Link ariaLabel="clothing" href="/collections/clothing">
 
                                 <a className="text-white overflow-hidden">
 
@@ -526,7 +526,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                         <div ref={addToHeadingRefs} className="c-favorites__heading__item position-relative d-flex py-1 should-animate">
 
-                            <Link href="/collections/shoes">
+                            <Link ariaLabel="shoes" href="/collections/shoes">
 
                                 <a className="text-white overflow-hidden">
 
@@ -544,7 +544,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                         <div ref={addToHeadingRefs} className="c-favorites__heading__item position-relative d-flex py-1 should-animate">
 
-                            <Link href="/collections/accessories">
+                            <Link ariaLabel="accessories" href="/collections/accessories">
 
                                 <a className="text-white overflow-hidden">
 
@@ -562,7 +562,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                         <div ref={addToHeadingRefs} className="c-favorites__heading__item position-relative d-flex py-1 should-animate">
 
-                            <Link href="/collections/homewear">
+                            <Link ariaLabel="homewear" href="/collections/homewear">
 
                                 <a className="text-white overflow-hidden">
 
@@ -594,7 +594,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                     </div>
 
-                    <Link href="/collections/shop-all">
+                    <Link ariaLabel="shop all" href="/collections/shop-all">
 
                         <a className="c-favorites__gallery__media ">
 
@@ -608,7 +608,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                     </Link>
 
-                    <Link href="/collections/new-arrivals">
+                    <Link ariaLabel="new arrivals" href="/collections/new-arrivals">
 
                         <a className="c-favorites__gallery__media">
 
@@ -622,7 +622,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                     </Link>
 
-                    <Link href="/collections/clothing">
+                    <Link  ariaLabel="clothing" href="/collections/clothing">
 
                         <a className="c-favorites__gallery__media">
 
@@ -636,7 +636,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                     </Link>
 
-                    <Link href="/collections/shoes">
+                    <Link ariaLabel="shoes" href="/collections/shoes">
 
                         <a className="c-favorites__gallery__media">
 
@@ -650,7 +650,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                     </Link>
 
-                    <Link href="/collections/accessories">
+                    <Link ariaLabel="accessories" href="/collections/accessories">
 
                         <a className="c-favorites__gallery__media">
 
@@ -664,7 +664,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                     </Link>
 
-                    <Link href="/collections/homewear">
+                    <Link ariaLabel="homewear" href="/collections/homewear">
 
                         <a className="c-favorites__gallery__media">
 

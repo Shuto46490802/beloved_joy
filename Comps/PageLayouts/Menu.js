@@ -275,7 +275,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
                         <div className={"c-menu__wrapper d-flex flex-wrap w-100"}>
                             <ul className={"c-menu__list w-100"}>
                                 <li className="c-menu__list__item w-100 my-1 ms-1">
-                                    <button name="button" onClick={() => setAccordion({ state: !accordion.state, anim: !accordion.state ? "anim-in" : "anim-out" })} className="c-menu__list__link js-accordion__trigger position-relative">
+                                    <button ariaLabel="button" name="button" onClick={() => setAccordion({ state: !accordion.state, anim: !accordion.state ? "anim-in" : "anim-out" })} className="c-menu__list__link js-accordion__trigger position-relative">
                                         <span ref={addToTextRefs} className={"c-menu__list__link__text lh-1"}>
                                             Shop
                                             </span>
@@ -289,7 +289,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
                                     <div ref={accordionRef} className={"js-accordion__body"} >
                                         <ul className={"c-menu__shop-list js-accordion__inner w-100 d-flex flex-wrap pt-1"} >
                                             <li className={"c-menu__shop-list__item"}>
-                                                <Link href="/collections/shop-all">
+                                                <Link ariaLabel="shop all" href="/collections/shop-all">
                                                     <a onClick={() => toggleMenu()} className={"c-menu__shop-list__link w-100 h-100"}>
                                                         <div ref={addToImageWrapRefs} className={"c-menu__shop-list__link__thumb "}>
                                                             <div className={"c-menu__shop-list__link__thumb__inner u-illustration-parent"}>
@@ -308,7 +308,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
                                                 </Link>
                                             </li>
                                             <li className={"c-menu__shop-list__item"}>
-                                                <Link href="/collections/new-arrivals" >
+                                                <Link ariaLabel="new arrivals" href="/collections/new-arrivals" >
                                                     <a onClick={() => toggleMenu()} className={"c-menu__shop-list__link w-100 h-100"}>
                                                         <div ref={addToImageWrapRefs} className={"c-menu__shop-list__link__thumb "}>
                                                             <div className={"c-menu__shop-list__link__thumb__inner u-illustration-parent"}>
@@ -327,7 +327,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
                                                 </Link>
                                             </li>
                                             <li className={"c-menu__shop-list__item"}>
-                                                <Link href="/collections/clothing"  >
+                                                <Link ariaLabel="clothing" href="/collections/clothing"  >
                                                     <a onClick={() => toggleMenu()} className={"c-menu__shop-list__link w-100 h-100"}>
                                                         <div ref={addToImageWrapRefs} className={"c-menu__shop-list__link__thumb "}>
                                                             <div className={"c-menu__shop-list__link__thumb__inner u-illustration-parent"}>
@@ -346,7 +346,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
                                                 </Link>
                                             </li>
                                             <li className={"c-menu__shop-list__item"}>
-                                                <Link href="/collections/shoes">
+                                                <Link ariaLabel="shoes" href="/collections/shoes">
                                                     <a onClick={() => toggleMenu()} className={"c-menu__shop-list__link w-100 h-100"}>
                                                         <div ref={addToImageWrapRefs} className={"c-menu__shop-list__link__thumb "}>
                                                             <div className={"c-menu__shop-list__link__thumb__inner u-illustration-parent"}>
@@ -365,7 +365,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
                                                 </Link>
                                             </li>
                                             <li className={"c-menu__shop-list__item"}>
-                                                <Link href="/collections/accessories" >
+                                                <Link ariaLabel="accessories" href="/collections/accessories" >
                                                     <a onClick={() => toggleMenu()} className={"c-menu__shop-list__link w-100 h-100"}>
                                                         <div ref={addToImageWrapRefs} className={"c-menu__shop-list__link__thumb "}>
                                                             <div className={"c-menu__shop-list__link__thumb__inner u-illustration-parent"}>
@@ -384,7 +384,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
                                                 </Link>
                                             </li>
                                             <li className={"c-menu__shop-list__item"}>
-                                                <Link href="/collections/homewear">
+                                                <Link ariaLabel="homewear" href="/collections/homewear">
                                                     <a onClick={() => toggleMenu()} className={"c-menu__shop-list__link w-100 h-100"}>
                                                         <div ref={addToImageWrapRefs} className={"c-menu__shop-list__link__thumb "}>
                                                             <div className={"c-menu__shop-list__link__thumb__inner u-illustration-parent"}>
@@ -408,7 +408,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
                                 <div ref={addToBorderRefs} className="c-menu__list__border" />
 
                                 <li className={"c-menu__list__item my-1 ms-1"}>
-                                    <Link href="/journal">
+                                    <Link ariaLabel="journal" href="/journal">
                                         <a onClick={() => toggleMenu()} className={"c-menu__list__link d-block w-100 h-100"}>
                                             <span ref={addToTextRefs} className={"c-menu__list__link__text lh-1"}>
                                                 Journal
@@ -419,7 +419,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
                                 <div ref={addToBorderRefs} className="c-menu__list__border" />
 
                                 <li className={"c-menu__list__item my-1  ms-1"}>
-                                    <Link href="/about">
+                                    <Link ariaLabel="about" href="/about">
                                         <a onClick={() => toggleMenu()} className={"c-menu__list__link d-block w-100 h-100"}>
                                             <span ref={addToTextRefs} className={"c-menu__list__link__text lh-1"}>
                                                 About
@@ -432,7 +432,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
 
                             <ul className={"c-menu__list c-menu__list--secondary w-50 py-2"}>
                                 <li className={"c-menu__list__item c-menu__list__item--secondary mx-1 my-1"}>
-                                    <Link href="/contact">
+                                    <Link ariaLabel="contact" href="/contact">
                                         <a onClick={() => toggleMenu()} className={"c-menu__list__link c-menu__list__link--secondary "}>
                                             <span ref={addToTextRefs} className={"c-menu__list__link__text c-menu__list__link__text--secondary lh-1"}>
                                                 Contact
@@ -441,7 +441,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
                                     </Link>
                                 </li>
                                 <li className={"c-menu__list__item c-menu__list__item--secondary  mx-1 my-1"}>
-                                    <Link href="/privacy/privacy-policy">
+                                    <Link ariaLabel="privacy policy" href="/privacy/privacy-policy">
                                         <a onClick={() => toggleMenu()} className={"c-menu__list__link c-menu__list__link--secondary "}>
                                             <span ref={addToTextRefs} className={"c-menu__list__link__text c-menu__list__link__text--secondary lh-1"}>
                                                 Privacy
@@ -450,7 +450,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
                                     </Link>
                                 </li>
                                 <li className={"c-menu__list__item c-menu__list__item--secondary  mx-1 my-1"}>
-                                    <Link href="/privacy/terms-conditions">
+                                    <Link ariaLabel="terms conditions" href="/privacy/terms-conditions">
                                         <a onClick={() => toggleMenu()} className={"c-menu__list__link c-menu__list__link--secondary "}>
                                             <span ref={addToTextRefs} className={"c-menu__list__link__text c-menu__list__link__text--secondary  lh-1"}>
                                                 Terms & Conditions
@@ -462,7 +462,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
 
                             <ul className={"c-menu__list c-menu__list--secondary  w-50 py-2"}>
                                 <li className={"c-menu__list__item c-menu__list__item--secondary  mx-1 my-1"}>
-                                    <Link href="/">
+                                    <Link ariaLabel="home" href="/">
                                         <a onClick={() => toggleMenu()} className={"c-menu__list__link c-menu__list__link--secondary"}>
                                             <span ref={addToTextRefs} className={"c-menu__list__link__text c-menu__list__link__text--secondary  lh-1"}>
                                                 Instagram
@@ -471,7 +471,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
                                     </Link>
                                 </li>
                                 <li className={"c-menu__list__item c-menu__list__item--secondary  mx-1 my-1"}>
-                                    <Link href="/">
+                                    <Link ariaLabel="home" href="/">
                                         <a onClick={() => toggleMenu()} className={"c-menu__list__link c-menu__list__link--secondary "}>
                                             <span ref={addToTextRefs} className={"c-menu__list__link__text c-menu__list__link__text--secondary  lh-1"}>
                                                 Poshmark
@@ -489,7 +489,7 @@ const Menu = ({ menuOpen, toggleMenu, numOfShopAll, numOfNewArrivals, numOfCloth
                                 <div style={{ position: "absolute", left: "-5000px" }}>
                                     <input type="text" />
                                 </div>
-                                <button name="button" onClick={() => toggleMenu()} className={"c-hoz-arrow c-hoz-arrow--right js-submit"}>
+                                <button ariaLabel="button" name="button" onClick={() => toggleMenu()} className={"c-hoz-arrow c-hoz-arrow--right js-submit"}>
                                     Subscribe
                                          <svg x="0px" y="0px" viewBox="0 0 22 10">
                                         <polygon points="17,0.65 16.29,1.35 19.44,4.5 0.65,4.5 0.65,5.5 19.44,5.5 16.29,8.65 17,9.35 21.35,5 " />

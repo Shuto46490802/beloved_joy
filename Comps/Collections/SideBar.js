@@ -439,7 +439,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
 
                                         <div onClick={() => toggleAccordion()} className="filter__heading mb-1">
 
-                                            <Link href="/collections/shop-all">
+                                            <Link ariaLabel="shop all" href="/collections/shop-all">
                                                 <a className="filter__heading__text mb-1 h2 line-link grow text-white">
                                                     <span className="line-link">
                                                         Shop All
@@ -460,7 +460,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
 
                                         <div onClick={() => toggleAccordion()} className="filter__heading mb-1">
 
-                                            <Link href="/collections/new-arrivals">
+                                            <Link ariaLabel="new arrivals" href="/collections/new-arrivals">
                                                 <a className="filter__heading__text mb-1 h2 line-link grow text-white">
                                                     <span className="line-link">
                                                         New Arrivals
@@ -481,7 +481,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
 
                                         <div onClick={() => toggleClothing()} className="filter__heading mb-1">
 
-                                            <Link href="/collections/clothing">
+                                            <Link ariaLabel="clothing" href="/collections/clothing">
                                                 <a className="filter__heading__text mb-1 h2 line-link grow text-white">
                                                     <span className="line-link">
                                                         Clothing
@@ -541,7 +541,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
 
                                         <div onClick={() => toggleShoes()} className="filter__heading mb-1">
 
-                                            <Link href="/collections/shoes">
+                                            <Link ariaLabel="shoes" href="/collections/shoes">
                                                 <a className="filter__heading__text mb-1 h2 line-link grow text-white">
                                                     <span className="line-link">
                                                         Shoes
@@ -611,7 +611,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
 
                                         <div onClick={() => toggleAccessories()} className="filter__heading mb-1">
 
-                                            <Link href="/collections/accessories">
+                                            <Link ariaLabel="accessories" href="/collections/accessories">
                                                 <a className="filter__heading__text mb-1 h2 line-link grow text-white">
                                                     <span className="line-link">
                                                         Accessories
@@ -672,7 +672,7 @@ const SideBar = ({ setClothingData, setShoesData, setAccessoriesData, clothingDa
                                         <div onClick={() => toggleAccordion()} className="filter__heading mb-1">
 
 
-                                            <Link href="/collections/homewear">
+                                            <Link ariaLabel="homewear" href="/collections/homewear">
                                                 <a className="filter__heading__text mb-1 h2 line-link grow text-white">
                                                     <span className="line-link">
                                                         Homewear

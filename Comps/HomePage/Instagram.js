@@ -205,7 +205,7 @@ const Instagram = ({ instagramData, getScrollProxy }) => {
 
                 <div ref={buttonRef} className="c-instagram__text__button pt-md-1 ps-md-3">
 
-                    <Link href="/">
+                    <Link ariaLabel="instagram" href="/">
 
                         <a className="c-instagram__text__button__link">
 

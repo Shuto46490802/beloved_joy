@@ -378,6 +378,7 @@ const Policy = ({ getScrollProxy }) => {
                         <div className="product-policy__list__item">
 
                             <button
+                                ariaLabel="button"
                                 name="button"
                                 onClick={() => {
                                     toggleShipping()
@@ -415,6 +416,7 @@ const Policy = ({ getScrollProxy }) => {
                         <div className="product-policy__list__item mt-2 mt-md-3"> {/* active */}
 
                             <button
+                                ariaLabel="button"
                                 name="button"
                                 onClick={() => {
                                     togglePickup()
@@ -453,6 +455,7 @@ const Policy = ({ getScrollProxy }) => {
                         <div className="product-policy__list__item mt-2 mt-md-3"> {/* active */}
 
                             <button
+                                ariaLabel="button"
                                 name="button"
                                 onClick={() => {
                                     togglePromise()

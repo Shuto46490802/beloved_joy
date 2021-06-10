@@ -348,7 +348,7 @@ const Pullout = ({ getScrollProxy, products }) => {
 
                     <div ref={image1WrapperRef} className="c-pullout__image1 overflow-hidden should-animate h-100">
 
-                        <Link href={`/products/[slug]`} as={`/products/${product.slug}`}>
+                        <Link ariaLabel="product" href={`/products/[slug]`} as={`/products/${product.slug}`}>
 
                             <a className="c-pullout__image__link w-100 h-100 position-absolute t-0 l-0">
 
@@ -390,7 +390,7 @@ const Pullout = ({ getScrollProxy, products }) => {
 
                         <div ref={headingTriggerRef} className="c-pullout__heading__link__wrapper w-100 h-100 on-top">
 
-                            <Link href={`/products/[slug]`} as={`/products/${product.slug}`}>
+                            <Link ariaLabel="product" href={`/products/[slug]`} as={`/products/${product.slug}`}>
 
                                 <a className="c-pullout__heading__link w-100 h-100 d-md-block d-flex flex-column align-items-center ">
 

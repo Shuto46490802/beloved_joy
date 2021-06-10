@@ -31,6 +31,7 @@ const Newsletter = ({ status, email, subscribe, unsubscribe }) => {
                     <input type="email" name="email" id="email" value={email} style={{ display: "none" }} />
 
                     <button
+                        ariaLabel="button"
                         name="button"
                         className="slider round h-100"
                         type="button"
