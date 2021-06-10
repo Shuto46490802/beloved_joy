@@ -14,6 +14,8 @@ This is a mock e-commerce website project bootstrapped with NEXT.js.
 - Create an account/login and access authenticated pages (your order histories, newsletter subscription and unsubscription (you can subscribe and unsubscribe without creating an account), your personal information, change password and logout)
 - Add products in your shopping cart and checkout with shopify payment (place a test order using Bogus Gateway(Name on card), 1(Credit card number), 111(CVV), Any date in the future(Expiry day))
 
+<br>
+
 - オンラインショップに必要な全ての機能を体験することができます
 - 製品をその製品タイプと製品サブタイプを元に探すことができます
 - 全文検索エンジンを使って製品を検索することができます。
@@ -47,9 +49,19 @@ This is a mock e-commerce website project bootstrapped with NEXT.js.
 - Create an account, login and logout (Firebase and Nookies)
 - Checkout, full-text search engine (Shopify storefront API, Apollo graphql)
 - Orders (Shopify admin API)
-- Cart management (locla storage)
+- Cart management (local storage)
 - Subscription/unsubscription (Mailchimp)
 - Content management (Contentful)
 - Parallax animation (GSAP and smooth scrollbar)
+
+<br>
+
+- アカウント作成、ログイン、ログアウト (Firebase and Nookies)
+- 支払い、全文検索 (Shopify storefront API, Apollo graphql)
+- 注文 (Shopify admin API)
+- 買い物かご (local storage)
+- サブスクリプションとその解除 (Mailchimp)
+- コンテンツ管理 (Contentful)
+- パララックス (GSAP and smooth scrollbar)
 
 
