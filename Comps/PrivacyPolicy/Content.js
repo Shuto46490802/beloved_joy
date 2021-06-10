@@ -613,7 +613,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                     <p >
                         We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.
-                    Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible from <Link ariaLabel="home" href="/"><a>https://beloved-joy.vercel.app/privacy/terms-conditions</a></Link>
+                    Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible from <Link ariaLabel="home" href="/privacy/terms-conditions"><a>https://beloved-joy.vercel.app/privacy/terms-conditions</a></Link>
                     </p>
 
                 </div>
@@ -624,7 +624,7 @@ const PrivacyPolicyContent = ({ addToSectionRefs }) => {
 
                     <p >
                         We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.
-                    Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible from <Link ariaLabel="home" href="/"><a>https://beloved-joy.vercel.app/privacy/terms-conditions</a></Link>
+                    Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible from <Link ariaLabel="home" href="/privacy/terms-conditions"><a>https://beloved-joy.vercel.app/privacy/terms-conditions</a></Link>
                     </p>
 
                 </div>
