@@ -446,7 +446,7 @@ const Pullout = ({ getScrollProxy, products }) => {
 
                                 <figure ref={addToImageRefs} className="fig-wrapper should-animate">
 
-                                    <img src={img6} layout="fill" />
+                                    <Image alt="" src={img6} layout="fill" />
 
                                 </figure>
 
