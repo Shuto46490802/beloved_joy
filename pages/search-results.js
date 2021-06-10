@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "../Comps/PageLayouts/Link";
 import Image from "next/image";
+import Head from 'next/head';
 
 import Footer from "../Comps/PageLayouts/Footer";
 

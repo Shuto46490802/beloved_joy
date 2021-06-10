@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import Head from 'next/head';
 
 import Content from "../../Comps/Collections/Content";
 

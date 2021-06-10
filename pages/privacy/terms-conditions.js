@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Head from 'next/head';
 
 import Intro from "../../Comps/TermsConditions/Intro";
 import Navigation from "../../Comps/TermsConditions/Navigation";

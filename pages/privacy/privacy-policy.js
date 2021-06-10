@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Head from 'next/head';
 
 import Intro from "../../Comps/PrivacyPolicy/Intro";
 import Content from "../../Comps/PrivacyPolicy/Content";

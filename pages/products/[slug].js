@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import Head from 'next/head';
 
 //components
 import Description from "../../Comps/Products/Description";

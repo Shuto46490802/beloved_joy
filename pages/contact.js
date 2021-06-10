@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react"
+import Head from 'next/head';
 
 import Content from "../Comps/Contact/Content";
 import Intro from "../Comps/Contact/Intro";
