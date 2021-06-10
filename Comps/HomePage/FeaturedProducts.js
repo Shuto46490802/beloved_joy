@@ -394,8 +394,8 @@ const FeaturedProducts = ({ getScrollProxy, products }) => {
                             })
                         }
 
-                        <button className="swiper-button-prev"></button>
-                        <button className="swiper-button-next"></button>
+                        <button name="swiper-button-prev" className="swiper-button-prev"></button>
+                        <button name="swiper-button-next" className="swiper-button-next"></button>
 
                     </Swiper>
 

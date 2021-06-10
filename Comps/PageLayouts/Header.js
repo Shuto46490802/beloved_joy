@@ -134,7 +134,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
 
                     <div className="nav-icon-links__wrapper col-md-4 d-flex align-items-center justify-content-end pe-md-1 pe-xl-2">
 
-                        <button className="search-icon nav-icon" onClick={() => { toggleSearch() }}>
+                        <button name="search-icon" className="search-icon nav-icon" onClick={() => { toggleSearch() }}>
 
                             <svg x="0px" y="0px" viewBox="0 0 21 21">
 
@@ -246,7 +246,7 @@ const Header = ({ headerRef, humburgerRef, toggleMenu, toggleShopMenu, toggleSea
 
                     <div className="c-humburger__inner d-inline-block">
 
-                        <button className="px-6 w-100 d-flex flex-center" onClick={() => { toggleMenu() }}>
+                        <button name="humburger" className="px-6 w-100 d-flex flex-center" onClick={() => { toggleMenu() }}>
 
                             <div className="vertical-lines d-block">
 

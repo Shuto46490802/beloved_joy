@@ -122,7 +122,7 @@ const NewsletterPopup = ({ toggleNewsletterPopup, newsletterPopupOpen, humburger
 
                         <figure className="fig-wrapper">
 
-                            <Image priority src={newsletter} layout="fill" />
+                            <Image priority src={newsletter} layout="fill" alt="newsletter-popup-image" />
 
                         </figure>
 
