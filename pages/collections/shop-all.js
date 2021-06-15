@@ -200,7 +200,7 @@ const ShopAll = ({ products, headerRef, humburgerRef }) => {
     <>
       <Head>
         <title>Beloved Joy | Home</title>
-      </Head>Shop All
+      </Head>
 
       <Content products={products} scrollerRef={scrollerRef} />
 
