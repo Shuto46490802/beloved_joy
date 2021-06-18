@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from 'next/head';
 
-import error from "../assets/error.jpg";
+import error from "../assets/error.jpg"
 
 export const getStaticProps = async () => {
 
