@@ -266,7 +266,7 @@ const JournalContent = ({ img, heading1, heading2, summary, sectionRef, innerRef
 
                             <figure ref={imageRef} className="fig-wrapper should-animate">
 
-                                <Image src={img} layout="fill" alt="journal image" />
+                                <Image priority src={img} layout="fill" alt="journal image" />
 
                             </figure>
 

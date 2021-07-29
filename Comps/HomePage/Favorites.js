@@ -588,7 +588,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                         <figure className="fig-wrapper">
 
-                            <Image alt="" src={img3} layout="fill" />
+                            <Image priority alt="" src={img3} layout="fill" />
 
                         </figure>
 
@@ -600,7 +600,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                             <figure className="fig-wrapper">
 
-                                <Image alt="" src={shopall} layout="fill" />
+                                <Image priority alt="" src={shopall} layout="fill" />
 
                             </figure>
 
@@ -614,7 +614,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                             <figure className="fig-wrapper">
 
-                                <Image alt="" src={newArrivals} layout="fill" />
+                                <Image priority alt="" src={newArrivals} layout="fill" />
 
                             </figure>
 
@@ -628,7 +628,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                             <figure className="fig-wrapper">
 
-                                <Image alt="" src={clothing} layout="fill" />
+                                <Image priority alt="" src={clothing} layout="fill" />
 
                             </figure>
 
@@ -642,7 +642,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                             <figure className="fig-wrapper">
 
-                                <Image alt="" src={shoes} layout="fill" />
+                                <Image priority alt="" src={shoes} layout="fill" />
 
                             </figure>
 
@@ -656,7 +656,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                             <figure className="fig-wrapper">
 
-                                <Image alt="" src={accessories} layout="fill" />
+                                <Image priority alt="" src={accessories} layout="fill" />
 
                             </figure>
 
@@ -670,7 +670,7 @@ const Favorites = ({ getScrollProxy }) => {
 
                             <figure className="fig-wrapper">
 
-                                <Image alt="" src={homewear} layout="fill" />
+                                <Image priority alt="" src={homewear} layout="fill" />
 
                             </figure>
 

@@ -365,13 +365,13 @@ const FeaturedProducts = ({ getScrollProxy, products }) => {
 
                                                 <figure className="fig-wrapper should-animate">
 
-                                                    <Image alt="" src={data.images[0].src} layout="fill" />
+                                                    <Image priority alt="" src={data.images[0].src} layout="fill" />
 
                                                 </figure>
 
                                                 <figure className="fig-wrapper c-product-thumb__overlay should-animate">
 
-                                                    <Image alt="" src={data.images[1].src} layout="fill" />
+                                                    <Image priority alt="" src={data.images[1].src} layout="fill" />
 
                                                 </figure>
 

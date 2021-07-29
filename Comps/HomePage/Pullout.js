@@ -358,7 +358,7 @@ const Pullout = ({ getScrollProxy, products }) => {
 
                                         <figure ref={image1Ref} className="fig-wrapper should-animate">
 
-                                            <Image alt="pullout product image" src={product.images[0].src} layout="fill" />
+                                            <Image priority alt="pullout product image" src={product.images[0].src} layout="fill" />
 
                                         </figure>
 
@@ -432,7 +432,7 @@ const Pullout = ({ getScrollProxy, products }) => {
 
                                 <figure ref={addToImageRefs} className="fig-wrapper should-animate">
 
-                                    <Image alt="" src={img5} layout="fill" />
+                                    <Image priority alt="" src={img5} layout="fill" />
 
                                 </figure>
 
@@ -446,7 +446,7 @@ const Pullout = ({ getScrollProxy, products }) => {
 
                                 <figure ref={addToImageRefs} className="fig-wrapper should-animate">
 
-                                    <Image alt="" src={img6} layout="fill" />
+                                    <Image priority alt="" src={img6} layout="fill" />
 
                                 </figure>
 
@@ -480,7 +480,7 @@ const Pullout = ({ getScrollProxy, products }) => {
 
                             <figure ref={image2MobileRef} className="fig-wrapper">
 
-                                <Image alt="" src={img5} layout="fill" />
+                                <Image priority alt="" src={img5} layout="fill" />
 
                             </figure>
 
@@ -494,7 +494,7 @@ const Pullout = ({ getScrollProxy, products }) => {
 
                             <figure ref={image3MobileRef} className="fig-wrapper">
 
-                                <Image alt="" src={img6} layout="fill" />
+                                <Image priority alt="" src={img6} layout="fill" />
 
                             </figure>
 

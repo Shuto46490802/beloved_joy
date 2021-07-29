@@ -482,7 +482,7 @@ const HomeAbout = ({ getScrollProxy }) => {
 
                                     <figure className="fig-wrapper should-animate">
 
-                                        <Image alt="" src={img2} layout="fill" />
+                                        <Image priority alt="" src={img2} layout="fill" />
 
                                     </figure>
 
@@ -498,7 +498,7 @@ const HomeAbout = ({ getScrollProxy }) => {
 
                                 <figure className="fig-wrapper should-animate">
 
-                                    <Image alt="" src={img3} layout="fill" />
+                                    <Image priority alt="" src={img3} layout="fill" />
 
                                 </figure>
 
@@ -559,7 +559,7 @@ const HomeAbout = ({ getScrollProxy }) => {
 
                                 <figure ref={addToImageRefs} className="fig-wrapper should-animate">
 
-                                    <Image alt="" src={img3} layout="fill" />
+                                    <Image priority alt="" src={img3} layout="fill" />
 
                                 </figure>
 
@@ -573,7 +573,7 @@ const HomeAbout = ({ getScrollProxy }) => {
 
                                 <figure ref={addToImageRefs} className="fig-wrapper should-animate">
 
-                                    <Image alt="" src={img4} layout="fill" />
+                                    <Image priority alt="" src={img4} layout="fill" />
 
                                 </figure>
 
