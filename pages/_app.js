@@ -730,10 +730,14 @@ function MyApp({ Component, pageProps, router, products }) {
                   appear={true}
                 >
 
-                  {isFirstLoaded
-                    ? <Component {...pageProps} key={router.asPath} footerRef={footerRef} clothingData={clothingData} shoesData={shoesData} accessoriesData={accessoriesData} headerRef={headerRef} humburgerRef={humburgerRef} toggleNewsletterPopup={toggleNewsletterPopup} collectionSideBarRef={collectionSideBarRef} />
-                    : null
-                  }
+                  <div>
+
+                    {isFirstLoaded
+                      ? <Component {...pageProps} key={router.asPath} footerRef={footerRef} clothingData={clothingData} shoesData={shoesData} accessoriesData={accessoriesData} headerRef={headerRef} humburgerRef={humburgerRef} toggleNewsletterPopup={toggleNewsletterPopup} collectionSideBarRef={collectionSideBarRef} />
+                      : null
+                    }
+
+                  </div>
 
                 </Transition>
 
