@@ -17,7 +17,7 @@ import { Transition, TransitionGroup } from "react-transition-group";
 import NewsletterPopup from './NewsletterPopup';
 import CartNotification from './CartNotification';
 
-const PageLayout = ({ children, touch, toggleMenu, toggleShopMenu, toggleSearch, toggleCart, menuOpen, searchOpen, shopMenuOpen, cartOpen, loaderContainerRef, pageRef, headerRef, humburgerRef, toggleLogin, loginOpen, accountOpen, toggleAccount, toggleNewsletterPopup, newsletterPopupOpen, numOfShopAll, numOfNewArrivals, numOfClothing, numOfShoes, numOfAccessories, numOfHomewear }) => {
+const PageLayout = ({ children, touch, toggleMenu, toggleShopMenu, toggleSearch, toggleCart, menuOpen, searchOpen, shopMenuOpen, cartOpen, loaderContainerRef, pageRef, headerRef, humburgerRef, toggleLogin, loginOpen, accountOpen, toggleAccount, toggleNewsletterPopup, newsletterPopupOpen, numOfShopAll, numOfNewArrivals, numOfClothing, numOfShoes, numOfAccessories, numOfHomewear, isFirstLoaded }) => {
 
     const { user } = useAuth();
 
@@ -26,47 +26,55 @@ const PageLayout = ({ children, touch, toggleMenu, toggleShopMenu, toggleSearch,
             <div className="page-background background pink" />
             <Cursor touch={touch} />
             <PreLoader loaderContainerRef={loaderContainerRef} />
-            <Header
-                toggleMenu={toggleMenu}
-                toggleShopMenu={toggleShopMenu}
-                toggleSearch={toggleSearch}
-                toggleCart={toggleCart}
-                menuOpen={menuOpen}
-                searchOpen={searchOpen}
-                shopMenuOpen={shopMenuOpen}
-                cartOpen={cartOpen}
-                headerRef={headerRef}
-                humburgerRef={humburgerRef}
-                toggleLogin={toggleLogin}
-                loginOpen={loginOpen}
-                toggleAccount={toggleAccount}
-                accountOpen={accountOpen}
-                newsletterPopupOpen={newsletterPopupOpen}
-            />
-            <ShopMenu
-                shopMenuOpen={shopMenuOpen}
-                toggleShopMenu={toggleShopMenu}
-                numOfShopAll={numOfShopAll}
-                numOfNewArrivals={numOfNewArrivals}
-                numOfClothing={numOfClothing}
-                numOfShoes={numOfShoes}
-                numOfAccessories={numOfAccessories}
-                numOfHomewear={numOfHomewear}
-            />
-            <Search searchOpen={searchOpen} toggleSearch={toggleSearch} />
-            <Cart toggleCart={toggleCart} cartOpen={cartOpen} />
-            <CartNotification />
-            <Menu
-                menuOpen={menuOpen}
-                toggleMenu={toggleMenu}
-                numOfShopAll={numOfShopAll}
-                numOfNewArrivals={numOfNewArrivals}
-                numOfClothing={numOfClothing}
-                numOfShoes={numOfShoes}
-                numOfAccessories={numOfAccessories}
-                numOfHomewear={numOfHomewear}
-            />
-            <NewsletterPopup humburgerRef={humburgerRef} headerRef={headerRef} toggleNewsletterPopup={toggleNewsletterPopup} newsletterPopupOpen={newsletterPopupOpen} />
+
+            {
+                isFirstLoaded
+                    ? <>
+                        <Header
+                            toggleMenu={toggleMenu}
+                            toggleShopMenu={toggleShopMenu}
+                            toggleSearch={toggleSearch}
+                            toggleCart={toggleCart}
+                            menuOpen={menuOpen}
+                            searchOpen={searchOpen}
+                            shopMenuOpen={shopMenuOpen}
+                            cartOpen={cartOpen}
+                            headerRef={headerRef}
+                            humburgerRef={humburgerRef}
+                            toggleLogin={toggleLogin}
+                            loginOpen={loginOpen}
+                            toggleAccount={toggleAccount}
+                            accountOpen={accountOpen}
+                            newsletterPopupOpen={newsletterPopupOpen}
+                        />
+                        <ShopMenu
+                            shopMenuOpen={shopMenuOpen}
+                            toggleShopMenu={toggleShopMenu}
+                            numOfShopAll={numOfShopAll}
+                            numOfNewArrivals={numOfNewArrivals}
+                            numOfClothing={numOfClothing}
+                            numOfShoes={numOfShoes}
+                            numOfAccessories={numOfAccessories}
+                            numOfHomewear={numOfHomewear}
+                        />
+                        <Search searchOpen={searchOpen} toggleSearch={toggleSearch} />
+                        <Cart toggleCart={toggleCart} cartOpen={cartOpen} />
+                        <CartNotification />
+                        <Menu
+                            menuOpen={menuOpen}
+                            toggleMenu={toggleMenu}
+                            numOfShopAll={numOfShopAll}
+                            numOfNewArrivals={numOfNewArrivals}
+                            numOfClothing={numOfClothing}
+                            numOfShoes={numOfShoes}
+                            numOfAccessories={numOfAccessories}
+                            numOfHomewear={numOfHomewear}
+                        />
+                        <NewsletterPopup humburgerRef={humburgerRef} headerRef={headerRef} toggleNewsletterPopup={toggleNewsletterPopup} newsletterPopupOpen={newsletterPopupOpen} />
+                    </>
+                    : null
+            }
+
 
             <TransitionGroup  >
 

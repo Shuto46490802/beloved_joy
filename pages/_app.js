@@ -774,6 +774,7 @@ function MyApp({ Component, pageProps, router, products }) {
               numOfShoes={numOfShoes}
               numOfAccessories={numOfAccessories}
               numOfHomewear={numOfHomewear}
+              isFirstLoaded={isFirstLoaded}
             >
 
               <TransitionGroup>
