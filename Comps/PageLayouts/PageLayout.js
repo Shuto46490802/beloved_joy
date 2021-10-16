@@ -107,13 +107,17 @@ const PageLayout = ({ children, touch, toggleMenu, toggleShopMenu, toggleSearch,
                     }}
                 >
 
-                    {
-                        isFirstLoaded
-                            ? user
-                                ? <MyAccount toggleAccount={toggleAccount} accountOpen={accountOpen} />
-                                : <Login toggleLogin={toggleLogin} loginOpen={loginOpen} />
-                            : null
-                    }
+                    <div>
+
+                        {
+                            isFirstLoaded
+                                ? user
+                                    ? <MyAccount toggleAccount={toggleAccount} accountOpen={accountOpen} />
+                                    : <Login toggleLogin={toggleLogin} loginOpen={loginOpen} />
+                                : null
+                        }
+
+                    </div>
 
                 </Transition>
 
