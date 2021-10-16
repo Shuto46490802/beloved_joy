@@ -312,7 +312,7 @@ function MyApp({ Component, pageProps, router, products }) {
       onStart: () => {
         setTimeout(() => {
           setIsFirstLoaded(true)
-        }, 1500)
+        }, 500)
       }
     })
       .fromTo(rule,
@@ -340,6 +340,10 @@ function MyApp({ Component, pageProps, router, products }) {
       .set(rule,
         {
           maxWidth: 0
+        })
+      .set(pageRef.current,
+        {
+          zIndex: 1
         })
       .fromTo(pageRef.current,
         {
