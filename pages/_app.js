@@ -312,7 +312,7 @@ function MyApp({ Component, pageProps, router, products }) {
       onStart: () => {
         setTimeout(() => {
           setIsFirstLoaded(true)
-        }, 500)
+        }, 1500)
       }
     })
       .fromTo(rule,
