@@ -24,7 +24,7 @@ const PageLayout = ({ children, touch, toggleMenu, toggleShopMenu, toggleSearch,
     return (
         <>
             <div className="page-background background pink" />
-            <Cursor touch={touch} />
+            <Cursor touch={touch} isFirstLoaded={isFirstLoaded} />
             <PreLoader loaderContainerRef={loaderContainerRef} />
 
             {

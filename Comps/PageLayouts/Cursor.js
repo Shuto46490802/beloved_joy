@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { useRouter } from "next/router"
 import { useAuth } from '../../lib/auth';
 
-const Cursor = ({ touch }) => {
+const Cursor = ({ touch, isFirstLoaded }) => {
 
     const cursorRef = useRef();
     const [cursorClass, setCursorClass] = useState("");
@@ -19,7 +19,7 @@ const Cursor = ({ touch }) => {
             document.body.removeEventListener('mousemove', cursorMove);
             document.body.removeEventListener('mouseleave', cursorLeave)
         };
-    }, [router, user])
+    }, [router, user, isFirstLoaded])
 
     const cursorMove = (event) => {
         if (!touch) {
