@@ -112,6 +112,11 @@ const PageLayout = ({ children, touch, toggleMenu, toggleShopMenu, toggleSearch,
             <div ref={pageRef} className="page">
 
                 {/* Contents start */}
+                {/* {
+                    isReady
+                        ? children
+                        : null
+                } */}
                 {children}
                 {/* Contents end */}
 

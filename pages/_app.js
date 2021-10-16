@@ -28,6 +28,7 @@ function MyApp({ Component, pageProps, router, products }) {
   const humburgerRef = useRef();
   const pageRef = useRef();
   const [isReady, setIsReady] = useState(false);
+  const [isFirstLoaded, setIsFirstLoaded] = useState(false);
 
   //Menus
   const [menuOpen, setMenuOpen] = useState({ state: false, anim: "" });
@@ -306,7 +307,14 @@ function MyApp({ Component, pageProps, router, products }) {
 
     const rule = CSSRulePlugin.getRule(".c-preloader__text:before");
 
-    tl.current = gsap.timeline({ paused: true })
+    tl.current = gsap.timeline({
+      paused: true,
+      onStart: () => {
+        setTimeout(() => {
+          setIsFirstLoaded(true)
+        }, 500)
+      }
+    })
       .fromTo(rule,
         {
           maxWidth: 0
@@ -335,7 +343,7 @@ function MyApp({ Component, pageProps, router, products }) {
         })
       .fromTo(pageRef.current,
         {
-          opacity: 0
+          opacity: 0,
         },
         {
           opacity: 1,
@@ -722,7 +730,10 @@ function MyApp({ Component, pageProps, router, products }) {
                   appear={true}
                 >
 
-                  <Component {...pageProps} key={router.asPath} footerRef={footerRef} clothingData={clothingData} shoesData={shoesData} accessoriesData={accessoriesData} headerRef={headerRef} humburgerRef={humburgerRef} toggleNewsletterPopup={toggleNewsletterPopup} collectionSideBarRef={collectionSideBarRef} />
+                  {isFirstLoaded
+                    ? <Component {...pageProps} key={router.asPath} footerRef={footerRef} clothingData={clothingData} shoesData={shoesData} accessoriesData={accessoriesData} headerRef={headerRef} humburgerRef={humburgerRef} toggleNewsletterPopup={toggleNewsletterPopup} collectionSideBarRef={collectionSideBarRef} />
+                    : null
+                  }
 
                 </Transition>
 
@@ -766,36 +777,45 @@ function MyApp({ Component, pageProps, router, products }) {
                   key={router.asPath}
                   appear={true}
                 >
-                  <Component
-                    {...pageProps}
-                    addToHeadingRefs={addToHeadingRefs}
-                    headingRefs={headingRefs}
-                    addToCaptionLeftRefs={addToCaptionLeftRefs}
-                    addToCaptionRightRefs={addToCaptionRightRefs}
-                    introImageWrapperRef={introImageWrapperRef}
-                    captionLeftRefs={captionLeftRefs}
-                    captionRightRefs={captionRightRefs}
-                    introHeadingWrapperRef={introHeadingWrapperRef}
-                    aboutIntroImageWrapperRef={aboutIntroImageWrapperRef}
-                    aboutIntroHeadingWrapperRef={aboutIntroHeadingWrapperRef}
-                    aboutIntroHeadingRef={aboutIntroHeadingRef}
-                    aboutIntroCaptionRef={aboutIntroCaptionRef}
-                    aboutIntroCaptionWrapperRef={aboutIntroCaptionWrapperRef}
-                    contactIntroImageWrapperRef={contactIntroImageWrapperRef}
-                    contactIntroHeading1WrapperRef={contactIntroHeading1WrapperRef}
-                    contactIntroHeading1Ref={contactIntroHeading1Ref}
-                    contactIntroHeading2WrapperRef={contactIntroHeading2WrapperRef}
-                    contactIntroHeading2Ref={contactIntroHeading2Ref}
-                    privacyIntroImageWrapperRef={privacyIntroImageWrapperRef}
-                    privacyIntroHeadingWrapperRef={privacyIntroHeadingWrapperRef}
-                    privacyIntroHeadingRef={privacyIntroHeadingRef}
-                    termsIntroImageWrapperRef={termsIntroImageWrapperRef}
-                    termsIntroHeadingWrapperRef={termsIntroHeadingWrapperRef}
-                    termsIntroHeadingRef={termsIntroHeadingRef}
-                    headerRef={headerRef}
-                    humburgerRef={humburgerRef}
-                    toggleNewsletterPopup={toggleNewsletterPopup}
-                  />
+
+                  <div>
+
+                    {
+                      isFirstLoaded
+                        ? <Component
+                          {...pageProps}
+                          addToHeadingRefs={addToHeadingRefs}
+                          headingRefs={headingRefs}
+                          addToCaptionLeftRefs={addToCaptionLeftRefs}
+                          addToCaptionRightRefs={addToCaptionRightRefs}
+                          introImageWrapperRef={introImageWrapperRef}
+                          captionLeftRefs={captionLeftRefs}
+                          captionRightRefs={captionRightRefs}
+                          introHeadingWrapperRef={introHeadingWrapperRef}
+                          aboutIntroImageWrapperRef={aboutIntroImageWrapperRef}
+                          aboutIntroHeadingWrapperRef={aboutIntroHeadingWrapperRef}
+                          aboutIntroHeadingRef={aboutIntroHeadingRef}
+                          aboutIntroCaptionRef={aboutIntroCaptionRef}
+                          aboutIntroCaptionWrapperRef={aboutIntroCaptionWrapperRef}
+                          contactIntroImageWrapperRef={contactIntroImageWrapperRef}
+                          contactIntroHeading1WrapperRef={contactIntroHeading1WrapperRef}
+                          contactIntroHeading1Ref={contactIntroHeading1Ref}
+                          contactIntroHeading2WrapperRef={contactIntroHeading2WrapperRef}
+                          contactIntroHeading2Ref={contactIntroHeading2Ref}
+                          privacyIntroImageWrapperRef={privacyIntroImageWrapperRef}
+                          privacyIntroHeadingWrapperRef={privacyIntroHeadingWrapperRef}
+                          privacyIntroHeadingRef={privacyIntroHeadingRef}
+                          termsIntroImageWrapperRef={termsIntroImageWrapperRef}
+                          termsIntroHeadingWrapperRef={termsIntroHeadingWrapperRef}
+                          termsIntroHeadingRef={termsIntroHeadingRef}
+                          headerRef={headerRef}
+                          humburgerRef={humburgerRef}
+                          toggleNewsletterPopup={toggleNewsletterPopup}
+                        />
+                        : null
+                    }
+
+                  </div>
 
                 </Transition>
 
