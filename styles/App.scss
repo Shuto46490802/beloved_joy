@@ -27,6 +27,9 @@
 }
 
 //preloader
+.c-preloader{
+    z-index: 10000;
+}
 .c-preloader__background {
     z-index: -1;
 }
