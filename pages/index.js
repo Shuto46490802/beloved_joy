@@ -272,7 +272,7 @@ const HomePage = ({ headerRef, humburgerRef, products, instagramData, addToHeadi
   return (
     <>
       <Head>
-        <title>Beloved Joy | Home</title>
+        <title>Beloved Joy</title>
       </Head>
 
       <div ref={scrollerRef} className="page">
