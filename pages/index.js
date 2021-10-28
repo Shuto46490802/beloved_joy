@@ -204,7 +204,7 @@ const HomePage = ({ headerRef, humburgerRef, products, instagramData, addToHeadi
   const scrollerRef = useRef();
 
   useEffect(() => {
-    getScrollProxy()
+    getScrollProxy();
   }, [])
 
   const getScrollProxy = () => {
